@@ -298,6 +298,7 @@ h2 {
 {
     text-decoration:  none;
     margin-left:      0em;   /* only required w/o nav-links styling */
+    font-weight:      normal;
 }
 
 #page-footer-content
@@ -317,4 +318,118 @@ h2 {
     min-height:        2px; 
     display:           block; 
     display:           none;     /* actually this option to create a rule is not used */
+}
+
+/*                                                              -*- mode:c -*-
+ *
+ * A flashy link style.
+ *
+ *
+ *
+ */
+
+
+/* a       { color:blue;text-decoration:underline;            } */
+a          { text-decoration:none; }
+a          { font-weight:bold; } 
+a          { border:4px solid transparent;                    }
+a          { border-left-style:none; border-right-style:none; }
+a:visited  { text-decoration:none; } 
+/* a:visited  { font-weight:normal; color:darkblue; } */
+
+a:visited  { color:#5060a0; }
+     
+
+/* a:link  { } */
+
+a:hover    { background-color:#c0c0ff; }
+a:focus    { background-color:#c0c0ff; 
+             border-color:#c00000; 
+           }
+
+a:visited:hover { background-color:#E0E0F5; }
+
+a:active   { border-color:#c0c0ff; } 
+
+/* it is recommended to either change the  border width to 2px or less or 
+   change the border-color to the button color.
+*/
+
+
+/* IE6 fix:
+ *  
+ *
+
+
+ */
+
+/*
+* html a {
+  border-width:0px;
+}
+*/
+
+#menu a:hover     {  background-color:#ffe000; }
+#menu a:active    {  background-color:#ffe000; }
+
+
+/*
+
+a                 { border-color:transparent; }
+
+a          { text-decoration:underline;border:4px,solid,transparent;
+             border-left-style:none; border-right-style:none;
+           }
+*/
+
+
+a:hover           { background-color:#ffe000; }
+a:focus           { background-color:#ffe000; border-color:transparent; }             
+a:active          { border-color:#ffe000;     }
+
+.nav-links a
+{
+    border:        2px solid transparent;
+
+    margin:        0px;
+    padding:       0px;
+    padding-left:  3px;
+    padding-right: 3px;
+
+    /* font-size:        90%; */
+    text-decoration:  none;
+    font-weight:      bold;
+
+    color:blue;
+}
+
+.nav-links a:focus, 
+.nav-links a:hover, 
+
+/*
+.nav-links a:active
+{
+  background-color: white;
+}
+*/
+
+.nav-links a:focus
+{
+    border-color: #a00000;
+}
+
+.nav-links a:hover
+{
+    border-top-color:     white;
+    border-left-color:    white;
+    border-bottom-color:  #a0a0a0;
+    border-right-color:   #a0a0a0;
+}
+
+.nav-links a:active
+{
+  border-top-color:       #a0a0a0;
+  border-left-color:      #a0a0a0;
+  border-bottom-color:    white;
+  border-right-color:     white;
 }
