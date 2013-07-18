@@ -8,7 +8,7 @@ Softwaretechnik. Sie entstand (in Fragmenten) im Verlauf des Sommersemesters 200
 Universität Tübingen, als ich die Übungen zur Vorlesung betreute, und wurde in den
 folgenden Monaten erweitert und in eine zum Release geeignete Form gebracht.
 
-TeachSWT war von 2003 bis etwa Mitte 20010 online. Ich habe jetzt (2013-07-16) die damals
+TeachSWT war von 2003 bis etwa Mitte 2010 online. Ich habe jetzt (2013-07-16) die damals
 archivierte Version der Website wieder online gestellt:
 [teachswt/index-2004.html][TeachSWT]. Lediglich die Linkstruktur wurde an die Einbindung
 in [Glitzersachen.de] angepasst.

@@ -9,20 +9,39 @@ title:  Projekte und Software
 
   [TeachSWT]:  teachswt.html
 
-* [mcalc]: (noch nicht online) - Ein Rechenprogramm ("taschenrechner"), das Zahlen, die
-  als Zahlwörtern geschrieben worden sind (wie 'zweihundertausendvierundsechzig')
-  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.
+* [MCalc]: Ein Rechenprogramm ("taschenrechner"), das Zahlen, die als Zahlwörtern
+  geschrieben worden sind (wie "zweihundertausendvierundsechzig") interpretieren
+  kann. Entstanden im Jahr 2005 als Demonstration.
 
-* [u-pki]: (noch nicht online) - A selfcontained script to maintain a public key
-  infrastructure easily.
+  [MCalc]:     http://github.com/m-e-leypold/mcalc
 
-   u-pki can be used to operate a CA (that means receiving certificate requests, signing
-  them and sending the certificates back). u-pki can also be used to manage definitions
-  for ssl based services (like "our imap-server", "our webserver" etc), generate keys and
-  send certificate requests for those services to the CA and recieve signed certificates
-  from the CA.
+* [u-pki]: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
+  einfache Weise einzurichten und zu verwalten.
+  
+  Aus dem README: 
+  
+  "u-pki can be used to operate a CA (that means receiving certificate
+  requests, signing them and sending the certificates back). u-pki can also be used to
+  manage definitions for ssl based services (like "our imap-server", "our webserver" etc),
+  generate keys and send certificate requests for those services to the CA and recieve
+  signed certificates from the CA.
 
-  Since u-pki is self contained, you can operate your CA or your ssl services provider on
-  any Unix machine that has openssl installed.
+  Since u-pki is self-contained, you can operate your CA or your ssl services provider on
+  any Unix machine that has openssl installed."
+
+  [u-pki]:     http://github.com/m-e-leypold/u-pki
+
+* [LSD Mount utilities]: The LSD mount utilities assist in setting up (creating) and
+   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.
+
+  They also enable users (not only root) to mount encrypted
+  filesystems if appropriate entries have been added to /etc/fstab.
+  
+  [LSD Mount Utilities]: http://github.com/m-e-leypold/lsd-mount-utilities
+
 
 More to come ...
+
+<!-- Local Variables: -->
+<!-- mode: markdown -->
+<!-- End: -->
