@@ -1,0 +1,11 @@
+### Lorem
+
+{% include lorem/all-pars.txt %}
+
+### Ipsum Dolor
+
+{% include lorem/explained-source.md %}
+
+### Duis Autem
+
+{% include lorem/all.txt %}
