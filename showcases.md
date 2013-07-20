@@ -27,10 +27,9 @@ Bis dorthin gibt es schon mal die folgenden Projekte (oder Projektchen):
 
   [TeachSWT]:  teachswt.html
 
-
-* [MCalc]: Ein Rechenprogramm ("taschenrechner"), das Zahlen, die als Zahlwörtern
-  geschrieben worden sind (wie "zweihundertausendvierundsechzig") interpretieren
-  kann. Entstanden im Jahr 2005 als Demonstration.
+* [MCalc]: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
+  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
+  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.
 
   [MCalc]:     http://github.com/m-e-leypold/mcalc
 
