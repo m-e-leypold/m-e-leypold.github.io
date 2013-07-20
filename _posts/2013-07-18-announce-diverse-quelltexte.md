@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Diverse Quelltexte (mcalc, u-pki, lsd-mount-utitilies) jetzt online.
+title:  Diverse Quelltexte (mcalc, u-pki, lsd-mount-utitilies) jetzt online
 ---
 Einige neue Goodies aus meinem Archiv: Die Quelltexte für [mcalc], [u-pki] und
 [lsd-mount-utilities][LSD Mount Utilities] sind jetzt (wieder) online.
