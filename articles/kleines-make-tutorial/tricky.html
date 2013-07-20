@@ -1,0 +1,285 @@
+---
+layout: default
+title:  Trickreiche Makefiles
+---
+
+
+<p> Da ich Makefiles uber alles liebe, möchte ich noch drei
+    kunstvollere Exemplare aus der Menagerie vorführen.
+    Makefile.tricky separiert die projektspezifischen Details in
+    wenige Zeilen, während der Rest des Makefiles generisch für eine
+    große Klasse kleiner C++-Projekte ist. Makefile.tricky2 generiert
+    zusätzlich die Abhängigkeiten der einzelnen Module
+    automatisch. Makefile.special schließlich ist so gestaltet, dass
+    es für jedes Modul das Vorhandensein einer Headerdatei (einer
+    Schnittstellendefinition) erzwingt.
+</p>
+
+<h3> Makefile.tricky </h3><a name="makefile-tricky"></a>
+
+<p> Das folgende Exemplar abstrahiert noch einige Variablen ab, um dem
+    Programmierer in den Zeilen 2-11 die Möglichkeit zu geben, die in
+    den Ubersetzungsprozessen verwendeten Werkzeuge zu
+    beeinflussen. Die Variablennamen entsprechen gängiger Praxis.
+    Darüberhinaus existieren nun eine Linkregel (Zeilen 22-23) und
+    eine separate Übersetzungsregel für Module (Zeilen 16-17), was die
+    Erwähnung der Modulheader in den Abhängigkeiten erspart. Die
+    Abhängigkeitenliste für jobs.o ist deshalb weggefallen. Zeilen
+    13-25 und 31-32 sind vollkommen generisch. Nur noch die Zeilen 5,
+    27-29 enthalten projektspezifische Angaben. Zeile 25 ist nötig, um
+    eine eingebaute Regel (siehe Abschnitt o 4) zu deaktivieren.
+
+<pre>
+     5	all: testschedule
+     6	
+     7	CXX       = g++
+     8	CPPFLAGS  =
+     9	CXXFLAGS  = -Wall -g 
+    10	LDFLAGS   = 
+    11	LOADLIBES =
+    12	
+    13	CXX-COMPILE = $(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
+    14	CXX-LINK    = $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LOADLIBES)
+    15	
+    16	%.o: %.cc %.hh
+    17		$(CXX-COMPILE)
+    18	
+    19	%.o: %.cc
+    20		$(CXX-COMPILE)
+    21	
+    22	%: %.o
+    23		$(CXX-LINK)
+    24	
+    25	%: %.cc # cancel this rule / could be replaced by COMPILE-LINK rule
+    26	
+    27	queues.o        : jobs.hh
+    28	testschedule.o  : queues.hh jobs.hh
+    29	testschedule    : queues.o jobs.o
+    30	
+    31	clean:
+    32		rm -f *.o testschedule *~
+</pre>
+</p>
+
+
+<h3> Makefile.tricky.2 </h3><a name="makefile-tricky-2"></a>
+
+<p> Das folgende Exemplar ist besonders interessant: Zum einen wurden
+    alle projektspezifischen Details (Zeilen 17-25) und alle Parameter
+    der Ubersetzungsprozesse (Zeilen 9-15) in eigenen Abschnitten
+    gesammelt. Zum anderen schreibt das Makefile seine Abhängigkeiten
+    selbst. Die prinzipielle Idee für dieses Verfahren, sowie die
+    Begründung, warum so etwas (verglichen mit der manuellen Pflege
+    der Abhängigkeitslisten) sinnvoll ist, wird soweit ich weiss zum
+    ersten Mal im Text <em>Recursive Make Considered Harmful</em>
+    (Miller, 1997) angesprochen.  
+
+<pre>
+     9	default: all
+    10	
+    11	CXX       = g++
+    12	CPPFLAGS  =
+    13	CXXFLAGS  = -Wall -g 
+    14	LDFLAGS   = 
+    15	LOADLIBES =
+    16	
+    17	MODULES         = jobs queues
+    18	PROGRAMS        = testschedule
+    19	
+    20	testschedule    : $(MODULES:%=%.o)
+    21	
+    22	clean:
+    23		rm -f *.o testschedule *~
+    24	
+    25	all: $(PROGRAMS)
+    26	
+    27	# ---------------------------------------------------------
+    28	
+    29	CXX-COMPILE = $(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
+    30	CXX-LINK    = $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LOADLIBES)
+    31	CXX-MKDEPS  = $(CXX) $(CPPFLAGS) -MM $< >$@ || { rm -f $@ ; false ; }
+    32	
+    33	%.o: %.cc %.hh
+    34		$(CXX-COMPILE)
+    35	
+    36	%.o: %.cc
+    37		$(CXX-COMPILE)
+    38	
+    39	%: %.o
+    40		$(CXX-LINK)
+    41	
+    42	%: %.cc # cancel this rule / could be replaced by COMPILE-LINK rule
+    43	
+    44	%.deps: %.cc
+    45		$(CXX-MKDEPS)
+    46	
+    47	ifneq ($(MAKECMDGOALS),veryclean)
+    48	  include $(PROGRAMS:%=%.deps) $(MODULES:%=%.deps)
+    49	endif
+    50	
+    51	veryclean: clean
+    52		rm -f *.deps
+</pre>
+
+
+<p> In den meisten Varianten von Make ist es möglich, Makefilefragmente
+    durch eine <em>include</em>-Anweisung einzuschliessen.
+
+    GNU Make hat dabei die Eigentümlichkeit, dass es die bereits 
+    bekannten Regeln durchgeht, um festzustellen, ob Informationen
+    vorliegen, wie die einzuschließende Datei erzeugt werden kann: Ist
+    diese Datei nicht vorhanden oder nach den bekannten Regeln nicht
+    auf dem neuesten Stand, so wird die Datei erzeugt bzw. regeneriert
+    und der ganze Ablauf neu gestartet.
+</p>
+
+<p> Wir müssen also für jedes Modul und jedes Programm (Hauptmodul)
+    ein entsprechendes Makefilefragment einschließen, in dem die
+    nötigen Abhängigkeiten stehen. Dies geschieht mittels eines
+    Patternersetzungsmechanismus in Zeile 53. Dann müssen wir noch die
+    Regeln liefern, wie diese Dateien (mit der Endung
+    "<em>.deps</em>") durch Untersuchung der Dateien mit der Endung
+    "<em>.cc</em>" erzeugt werden können. Dies geschieht in den Zeilen
+    49-50 (Patternregel) und 32-36.
+</p>
+
+<p> Der Kern des Mechanismus in Zeile 32-36 ist, dass die meisten
+    C-Compiler (hier gcc mit dem Schalter -MM) die Abhängigkeiten der
+    Objektdateien von Headerdateien aus den Quellen ermitteln und
+    ausgegeben können (Das ist nicht so uberraschend. Wer, wenn
+    nicht der C-Compiler, sollte sonst über Informationen verfügen, 
+    welche Dateien im Laufe eines Übersetzungslaufs gelesen werden).
+ .  Beispielsweise steht nach einem Makelauf in <em>queue.deps</em>:
+<pre>
+    queues.o: queues.cc queues.hh jobs.hh 
+    queues.deps: queues.cc queues.hh jobs.hh
+</pre>
+
+    Die Abhängigkeitsliste für queues.deps ist nötig, damit diese
+    Datei auch regeneriert wird, wenn sich eine der indirekt
+    eingeschlossenen Headerdateien andert: Schließlich könnte in
+    dieser eine neue include-Direktive hinzugekommen sein, oder eine
+    vorhandene weggefallen sein. Diese Abhängigkeitenliste wird
+    natürlich nicht vom Compiler ausgegeben (die für queues.o dagegen
+    schon), sondern durch Nachbearbeitung die Ausgabe des Compilers
+    mit dem Shellskript-Fragment in Zeile 34 erzeugt.
+</p>
+
+
+<h3> Makefile.special </h3> <a name="makefile-special"></a>
+
+<p>
+<pre>
+     5	all: testschedule
+     6	
+     7	CXX       = g++
+     8	CPPFLAGS  =
+     9	CXXFLAGS  = -Wall -g 
+    10	LDFLAGS   = 
+    11	LOADLIBES =
+    12	
+    13	CXX-COMPILE = $(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
+    14	CXX-LINK    = $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^ $(LOADLIBES)
+    15	
+    16	%.oo: %.cc %.hh
+    17		$(CXX-COMPILE)
+    18	
+    19	%.OO: %.cc
+    20		$(CXX-COMPILE)
+    21	
+    22	%: %.OO
+    23		$(CXX-LINK)
+    24	
+    25	%: %.cc # cancel this rule / could be replaced by COMPILE-LINK rule
+    26	
+    27	queues.oo        : jobs.hh
+    28	testschedule.OO  : queues.hh jobs.hh
+    29	testschedule     : queues.oo jobs.oo
+    30	
+    31	clean:
+    32		rm -f *.oo *.OO testschedule *~
+</pre>
+
+    Dieses Makefile ist wieder von Makefile.tricky abgeleitet. Hier
+    wird versucht, anhand der Endung einer Objektdatei eine
+    unterschiedliche Behandlung für gewöhnliche Module, für die
+    Schnittstellendefinitionen in einer Headerdatei vorliegen müssen,
+    und Hauptmodulen, für die dies nicht so sein muss, zu
+    implementieren. Diese Unterscheidung wird hier an der Endung der
+    erzeugten Objektdatei festgemacht: Gewöhnliche Module enden auf
+    "<em>.oo</em>" während Hauptmodule (die
+    eine <em>main()</em>-Prozedur enthalten) auf "<em>.OO</em>"
+    enden. Die Regeln sind so gestaltet, dass für die Erzeugung einer
+    auf "<em>.oo</em>" endenden Datei sowohl eine auf "<em>.cc</em>"
+    endende Datei als auch eine entsprechende auf "<em>.hh</em>"
+    endende Datei nötig ist (Zeilen 16-17). Liegt für ein gewöhnliches
+    Modul keine Headerdatei vor, wird der Ubersetzungsprozess immer
+    scheitern.
+<p>
+
+<h3> Eingebaute Make-Regeln und Konventionen </h3> <a name="built-in-rules"></a>
+
+<p> Zum Abschluss möchte ich noch darauf hinweisen, dass die meisten
+    Make-Varianten bereits eingebaute Regeln haben, welche sie
+    kennen, ehe sie beginnen, das vom Benutzer definierte Makefile zu
+    lesen. Beispielsweise hat GNU Make die folgende Regel bereits
+    eingebaut: 
+
+<pre>
+    %.o: %.cc $(CXX) -c $(CPPFLAGS) $(CXXFLAGS)
+</pre>
+
+    Die Struktur der eingebauten Regel und die verwendeten Namen (<em>CXX</em>,
+    <em>CPPFLAGS</em>, <em>CXXFLAGS</em>) entsprechen dabei gewissen Konventionen, die
+    auch für alle anderen eingebauten Regeln gelten: z. B. ist <em>CC</em>
+    immer der C-Compiler (und der Linker), <em>CFLAGS</em> die an diesen
+    Compiler übergebenen Flags.
+</p>
+
+<p> Die eingebauten Regeln sparen zum einen Arbeit, beispielsweise
+    hätten wir statt Makefile.4 nur das Folgende schreiben müssen:
+
+<pre>
+     5  all: testschedule
+     6  
+     7  CXX       = g++
+     8  CXXFLAGS  = -Wall -g
+     9  CC        = g++                 # enforce linking with g++
+    10
+    11  jobs.o           : jobs.hh
+    12  queues.o         : queues.hh jobs.hh
+    13  testschedule.o   : queues.hh jobs.hh
+    14
+    15  testschedule     : queues.o jobs.o
+    14  
+    17  clean:
+    18          rm -f *.oo *.OO testschedule *~
+</pre>
+
+    Andererseits kann das Vorhandensein der eingebauten Regeln
+    natürlich eigene Regeln behindern oder zu ungeplanten Resultaten
+    (Abkürzungen!)  führen. Aus diesem Grund wird in den
+    "trickreichen" Makefiles die Regel <em>%.o: %.cc</em> explizit
+    abgeschaltet, indem sie ohne Befehlsteil aufgeführt wird. Will
+    man, dass GNU Make alle eingebauten Befehle vergisst, muss man es
+    mit der Option -r aufrufen.
+</p>
+
+<p> (Übung für den Leser: Warum die Zuweisung in Zeile 9? Was
+     passiert, wenn diese weggelassen wird?)
+</p>
+
+<p> Sehr viel mehr Informationen über die angesprochenen Themen finden
+    sich im 
+    <a href="further-reading.html#stallman+mcgrath-2000"><em>GNU Make Manual</em> (Stallman und McGrath, 2000)</a> 
+    und in
+    <a href="further-reading.html#miller-1997"><em>Recursive Make Considered Harmful</em> (Miller, 1997)</a>. 
+</p>
+
+
+<p class="book-nav">
+  <a class="book-next-chapter" href="simple.html">&lt;&lt;&nbsp;Einfache Make-Definitionen</a>
+  &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+  <a class="book-next-chapter" href="further-reading.html">Literatur&nbsp;&gt;&gt;</a>
+</p>
+

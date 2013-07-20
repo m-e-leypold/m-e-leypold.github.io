@@ -1,0 +1,199 @@
+---
+layout: default
+title:  Einfache Makefiles
+---
+
+
+
+<h3> Makefile -  Abhängigkeitsregeln und Aktionen </h3>
+     	      	 <a name="makefile"></a><a name="makefile1"></a>
+
+<p> Dies ist das einfachste Makefile, das die Aufgabenstellung
+    erfüllt. Es gibt 2 Pseudo-Targets (all in Zeile 5, clean in den
+    Zeile 19+20), welche nicht Produkten des Übersetzungsprozesses
+    entsprechen, sondern eher administrative Funktion haben. Die
+    Produkte (Targets) sind explizit gelistet, sowie die Edukte
+    (Dependencies) aus denen sie gefertigt werden, und ein Befehl
+    (Action), mit dem aus den Edukten jeweils das Produkt erzeugt
+    werden kann.
+</p>
+
+<pre class="listing">
+     5	all: testschedule
+     6	
+     7	jobs.o          : jobs.cc jobs.hh
+     8		g++ -Wall -g -c jobs.cc
+     9	
+    10	queues.o        : queues.cc queues.hh jobs.hh
+    11		g++ -Wall -g -c queues.cc
+    12	
+    13	testschedule.o  : testschedule.cc queues.hh jobs.hh
+    14		g++ -Wall -g -c testschedule.cc
+    15	
+    16	testschedule     : testschedule.o queues.o jobs.o
+    17		g++ -Wall -g -o testschedule testschedule.o queues.o jobs.o
+    18	
+    19	clean:
+    20		rm -f *.o testschedule *~
+</pre>
+
+<p> Eine gewisse Redundanz fällt hier auf: Produkte und Edukte werden
+    sowohl in der Abhängigkeitsdeklaration (z. B. Zeile 16), als
+    auch im dazugehorigen Übersetzungsprozess (z. B. Zeile 17)
+    explizit genannt. 
+</p>
+
+
+<h3> Makefile.2 - Automatische Variablen </h3><a name="makefile2"></a>
+
+<p> Die erwähnte Redundanz kann durch die Verwendung der sogenannten
+    automatischen Variablen in den Aktionen vermieden werden. Vor dem
+    Ausführen des Übersetzungsbefehls werden die automatischen
+    Variablen durch Teile der Abhängigkeitsregeln ersetzt, und zwar:
+    <ul>
+	<li><em>$@</em>&nbsp; durch den Namen des Produktes (linke Seite vor
+            dem Doppelpunkt),
+	    </li>	
+
+    	<li><em>$&lt;</em>&nbsp; durch den Namen des linken Eduktes,</li>
+
+    	<li><em>$^</em>&nbsp; durch die Liste der Edukte (rechte Seite nach
+            dem Doppelpunkt).
+	    </li>
+    </ul>
+
+    Wie man sich mit diesen Regeln leicht überzeugen kann, ist das
+    folgende Makefile äquivalent zum vorangegangenen:
+
+<pre>
+     5	all: testschedule
+     6	
+     7	jobs.o          : jobs.cc jobs.hh
+     8		g++ -Wall -g -c $<
+     9	
+    10	queues.o        : queues.cc queues.hh jobs.hh
+    11		g++ -Wall -g -c $<
+    12	
+    13	testschedule.o  : testschedule.cc queues.hh jobs.hh
+    14		g++ -Wall -g -c $<
+    15	
+    16	testschedule     : testschedule.o queues.o jobs.o
+    17		g++ -Wall -g -o $@ $^
+    18	
+    19	clean:
+    20		rm -f *.o testschedule *~
+</pre>
+
+    Nun wird sichtbar, dass die Struktur der Befehle zum Übersetzen in
+    Objektdateien vollkommen gleich ist. Diese Redundanz nutzen und
+    beseitigen wir in den nächsten beiden Schritten.
+</p>
+
+
+<h3> Makefile.3 - Abstraktion über Aktionen </h3><a name="makefile3"></a>
+
+<p> Wir können die Befehle zum Übersetzen in eine eigene Variable
+    abstrahieren.  Es sei hier angemerkt, dass die Expansion von
+    Variablen so spät als möglich erfolgt, so dass die Erwähnung der
+    automatischen Variablen in der Definition von CXX-COMPILE und
+    CXX-LINK auch außerhalb einer Übersetzungsregel Sinn macht, sofern
+    diese Variablen in einer Übersetzungsregel <em>verwendet</em>
+    werden.
+
+<pre>
+     5	all: testschedule
+     6	
+     7	CXX-COMPILE = g++ -Wall -g -c $<
+     8	CXX-LINK    = g++ -Wall -g -o $@ $^
+     9	
+    10	
+    11	jobs.o          : jobs.cc jobs.hh
+    12		$(CXX-COMPILE)
+    13	
+    14	queues.o        : queues.cc queues.hh jobs.hh
+    15		$(CXX-COMPILE)
+    16	
+    17	testschedule.o  : testschedule.cc queues.hh jobs.hh
+    18		$(CXX-COMPILE)
+    19	
+    20	testschedule     : testschedule.o queues.o jobs.o
+    21		$(CXX-LINK)
+    22	
+    23	clean:
+    24		rm -f *.o testschedule *~    
+</pre>
+
+    An sich bringt das nicht so viel, hat aber den Vorteil, dass
+    Änderungen an den bei der Übersetzung verwendeten
+    Compileroptionen nun an einer zentralen Stelle der Objektdatei
+    vorgenommen werden können.
+</p>
+
+<h3> Makefile.4 - Pattern-Regel </h3><a name="makefile4"></a>
+
+<p> Die ähnlichen Ubersetzungsregeln für die Objektdateien lassen sich
+    nun in eine Patternregel (Zeilen 10-11) separieren:
+
+<pre>
+     5	all: testschedule
+     6	
+     7	CXX-COMPILE = g++ -Wall -g -c $<
+     8	CXX-LINK    = g++ -Wall -g -o $@ $^
+     9	
+    10	%.o: %.cc
+    11		$(CXX-COMPILE)
+    12	
+    13	jobs.o          : jobs.hh
+    14	queues.o        : queues.hh jobs.hh
+    15	testschedule.o  : queues.hh jobs.hh
+    16	
+    17	testschedule     : testschedule.o queues.o jobs.o
+    18		$(CXX-LINK)
+    19	
+    20	clean:
+    21		rm -f *.o testschedule *~
+</pre>
+
+   Diese bedeutet, dass, wo immer eine auf .o endende Datei benötigt
+   wird, diese durch o Ausführung der Befehle in CXX-COMPILE aus einer
+   auf .cc endenden Datei gewonnen werden könnte. In den Zeilen 13-15
+   werden durch Abhängigkeitsregeln ohne Übersetzungsbefehle (Action)
+   weitere Abhängigkeiten hinzugefügt, über diejenigen hinaus, die
+   sich aus der Anwendung der Patternregel ergeben. Make muss sich nun
+   auch die intermediären Produkte, die es benötigt, um die
+   endgültigen Produkte fertigen zu können, selbst zusammensuchen. Für
+   <em>jobs.o</em> sieht der Ablauf also so aus:
+
+   <ul>
+
+     <li> Um testschedule zu erzeugen, wird u. a. jobs.o benötigt.
+	  </li>
+
+     <li> Für jobs.o existiert keine explizite Regel. Aber die gegebene
+	  Patternregel (Zeilen u 10-11) besagt, dass sich jobs.o aus
+	  jobs.cc mittels $(CXX-COMPILE) erstellen ließe.  </li>
+
+     <li> Die Datei jobs.cc existiert, und hat ihrerseits keine
+	  Produktionsregel. Auf dieser Seite ist der Vorgang, die notwendigen
+	  Aktionen zur Fertigung aller nötigen Produkte zu bestimmen, also
+	  abgeschlossen.
+     </li>
+
+     <li> In Zeile 13 ist jobs.hh als weiteres Edukt von jobs.o genannt,
+	  die vollständige Liste a der Edukte ist also: jobs.cc,
+	  jobs.hh.  
+	  </li>
+
+     <li> Wenn nun jobs.o älter ist als jobs.cc oder jobs.hh, muss
+	  CXX-COMPILE expandiert werden, man erhält <em>g++ -Wall -g -c jobs.cc</em>,
+	  und ausgeführt werden.</li>
+   </ul>
+</p>
+
+<p class="book-nav book-nav-bottom">
+  <a class="book-next-chapter" href="gnu-make.html">&lt;&lt;&nbsp;Über GNU Make</a>
+  &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+  <a class="book-next-chapter" href="tricky.html">Trickreiche Make-Definitionen&nbsp;&gt;&gt;</a>
+</p>
+
+
