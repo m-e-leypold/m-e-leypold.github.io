@@ -3,9 +3,9 @@ layout:  default
 title:   "Tip: Deactivate the Linking Rule %: %.o in Makefiles"
 tags:    techtip make
 
-excerpt: "Make's builtin rules allow two possible ways to build executables from C++
+excerpt: "The built-in rules of 'make' allow two different paths to build executables from C++
           sources. I recommend to deactivate the rule to link executables from objects
-          in your Makefile to avoid unwelcome surprise"
+          in your Makefile in order to avoid unwelcome surprise"
 
 ---
 
