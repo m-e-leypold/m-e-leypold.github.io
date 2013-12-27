@@ -1,12 +1,15 @@
 ---
-layout: default
-title:  Leider nicht selten dämlich
+layout:   default
+title:    Leider nicht selten dämlich
+excerpt:  "Der Neuen Züricher Zeitung zufolge wurden aus dem Schengener Informationssystem
+          Daten unbefugt kopiert. Die Presseerklärung hierzu versucht der Öffentlichkeit
+          Sand in die Augen zu streuen. Ich nenne es: Sich der Verantwortung entziehen."
 ---
 
 Der [Neuen Züricher Zeitung zufolge][nzz-artikel] wurden aus dem Schengener
 Informationssystem Daten "gestohlen" (über die Anwendbarkeit des Wortes gestohlen kann man
 sich schon streiten: Unrechtmäßig kopiert ist ja nicht entwendet, letzteres impliziert ja
-ein Verschwinden am ursprünglichen Ort und mir scheint "gestohlen" dem "entwendet doch
+ein Verschwinden am ursprünglichen Ort und mir scheint "gestohlen" dem "entwendet" doch
 näher zu sein - aber darum geht es hier nicht).
 
 Fedpol (die ermittelnde Behörde) dazu so: (Zitat) *Ausserdem seien die Angaben codiert und
@@ -17,9 +20,9 @@ nicht aber um eine eigentliche Verschlüsselung*.
 Das ist ja wirklich ein riesige Hürde ...  Ich bin inzwischen ja der Ansicht, dass solche
 Presserklärungen von staatlichen oder quasi-staatlichen Institutionen unter Strafe stehen
 sollen: Entweder wissen diejenigen, die sie formuliert haben, nicht, wovon sie sprechen,
-dann habe sie die Strafe schon aus Inkompetenz, um nicht zu sagen Dummheit, verdient. Oder
-sie streuen mit Absicht Sand in die Augen der Öffentlichkeit - und das ist von einer
-staatlichen Institution nicht zu tolerieren.
+dann habe sie die Strafe schon aus Inkompetenz verdient. Oder aber sie streuen mit Absicht
+Sand in die Augen der Öffentlichkeit - und das ist von einer staatlichen Institution nicht
+zu tolerieren.
 
 Ich sehe das letztlich als eine Versuch, Demokratie zu unterlaufen. "Häh, Demokratie?"
 wird sich da mancher fragen - "die versuchen doch nur ihren Arsch zu retten" (bzw ihr
