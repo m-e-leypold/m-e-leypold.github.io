@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>Glitzersachen.de</title>
+    <link>http://www.glitzersachen.de//blog</link>
+    <description>About things I find glittering at the roadside</description>
+    <pubDate>Mon, 13 Jan 2014 00:36:28 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Cyberpunk Rising</title>
+      <link>http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising</link>
+      <pubDate>Sun, 03 Nov 2013 12:00:00 EST</pubDate>
+      <category><![CDATA[news]]></category>
+      <category><![CDATA[de]]></category>
+      <guid isPermaLink="false">910AA_5HVlD5IAxZDr8gfJDF_Yg=</guid>
+      <description>Cyberpunk Rising</description>
+      <content:encoded><![CDATA[<p>Aus den aktuellen Nachrichten:
+<em> <a href="http://futurezone.at/digital-life/buegeleisen-infizieren-per-wlan-pcs-mit-malware/33.905.164/print">Bügeleisen infizieren per WLAN PCs mit Malware</a> 
+</em> <a href="http://www.heise.de/newsticker/meldung/Super-Malware-BadBIOS-wirft-Fragen-auf-2038240.html?view%3Dprint">Super-Malware "BadBIOS" wirft Fragen auf</a> </p>
+<p>Entweder drehen jetzt alle hohl, oder die <a href="http://en.wikipedia.org/wiki/Cyberpunk">Cyberpunk-Zukunft</a> rollt doch
+schneller auf uns zu, als ich erwartet hätte. Spannend. ;-)</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content:encoded>
+    </item>
+    <item>
+      <title>Kleines Make-Tutorial nun online</title>
+      <link>http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013</link>
+      <pubDate>Fri, 19 Jul 2013 12:00:00 EDT</pubDate>
+      <category><![CDATA[announcement]]></category>
+      <category><![CDATA[make-tutorial]]></category>
+      <category><![CDATA[de]]></category>
+      <category><![CDATA[howto]]></category>
+      <category><![CDATA[blog]]></category>
+      <category><![CDATA[news]]></category>
+      <category><![CDATA[tutorial]]></category>
+      <guid isPermaLink="false">http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013</guid>
+      <description>Kleines Make-Tutorial nun online</description>
+      <content:encoded><![CDATA[<p>Das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a> aus <a href="http://www.teachswt.de">TeachSWT</a> ist jetzt <a href="http://www.teachswt.de">online</a>.</p>
+<p>Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
+einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.</p>
+<p>Das Tutorial ist eine Auskopplung aus <a href="http://www.teachswt.de">TeachSWT</a> und zwar aus <a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf">Lösung 4</a>. Ich hielt es
+Ende 2010 für lohnenswert, den Text als eigenes Dokument weiterzupflegen, und wandelte ihn
+Ende 2010 für ein Blog um, für das geplant war, es Ende 2010 online gehen zu lassen.  Die
+Umsetzung des Blogs wurde dann aus verschiedenen Gründen erst mal auf Eis gelegt.</p>
+<p>Aber jetzt gibt es wieder ein neues Blog und mit ihm das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a>, jetzt als
+Hypertext. Viel Spaß.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content:encoded>
+    </item>
+    <item>
+      <title>Diverse Quelltexte jetzt online</title>
+      <link>http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online</link>
+      <pubDate>Thu, 18 Jul 2013 12:00:00 EDT</pubDate>
+      <category><![CDATA[news]]></category>
+      <category><![CDATA[de]]></category>
+      <category><![CDATA[u-pki]]></category>
+      <category><![CDATA[lsd-mount-utilities]]></category>
+      <category><![CDATA[mcalc]]></category>
+      <guid isPermaLink="false">EVgOSuSdlb4stO4LI5XiiESfT7M=</guid>
+      <description>Diverse Quelltexte jetzt online</description>
+      <content:encoded><![CDATA[<p>Einige neue Goodies aus meinem Archiv: Die Quelltexte für <a href="http://github.com/m-e-leypold/mcalc">mcalc</a>, <a href="http://github.com/m-e-leypold/u-pki">u-pki</a> und
+<a href="http://github.com/m-e-leypold/lsd-mount-utilities">lsd-mount-utilities</a> sind jetzt (wieder) online.</p>
+<ul>
+<li>
+<p><a href="http://github.com/m-e-leypold/mcalc">MCalc</a>: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
+  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
+  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/u-pki">u-pki</a>: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
+  einfache Weise einzurichten und zu verwalten.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/lsd-mount-utilities">LSD Mount utilities</a>: The LSD mount utilities assist in setting up (creating) and
+   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.</p>
+</li>
+</ul>
+<p>They also enable users (not only root) to mount encrypted
+  filesystems if appropriate entries have been added to /etc/fstab.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content:encoded>
+    </item>
+  </channel>
+</rss>

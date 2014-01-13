@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">Glitzersachen.de</title>
+  <subtitle type="text">About things I find glittering at the roadside</subtitle>
+
+  <updated>2014-01-13T00:36:28Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://www.glitzersachen.de//blog" />
+  <id>http://www.glitzersachen.de//blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://www.glitzersachen.de//blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Leider nicht selten dämlich]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/12/27/leider-nicht-selten-damlich" />
+    <id>http://www.glitzersachen.de/blog/2013/12/27/leider-nicht-selten-damlich</id>
+    <updated>2013-12-27T12:00:00Z</updated>
+    <published>2013-12-27T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="blog" />
+    <category scheme="http://www.glitzersachen.de//blog" term="politics" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <summary type="html"><![CDATA[Leider nicht selten dämlich]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/12/27/leider-nicht-selten-damlich"><![CDATA[<p>Der <a href="http://www.nzz.ch/aktuell/schweiz/schengen-daten-in-daenemark-gestohlen-1.18210733">Neuen Züricher Zeitung zufolge</a> wurden aus dem Schengener
+Informationssystem Daten "gestohlen" (über die Anwendbarkeit des Wortes gestohlen kann man
+sich schon streiten: Unrechtmäßig kopiert ist ja nicht entwendet, letzteres impliziert ja
+ein Verschwinden am ursprünglichen Ort und mir scheint "gestohlen" dem "entwendet" doch
+näher zu sein - aber darum geht es hier nicht).</p>
+<p>Fedpol (die ermittelnde Behörde) dazu so: (Zitat) <em>Ausserdem seien die Angaben codiert und
+könnten somit nicht ohne weiteres verwendet werden. Bei der Codierung handelt es sich
+jedoch lediglich um einen Zahlencode für die jeweils angeordnete polizeiliche Massnahme,
+nicht aber um eine eigentliche Verschlüsselung</em>.</p>
+<p>Das ist ja wirklich ein riesige Hürde ...  Ich bin inzwischen ja der Ansicht, dass solche
+Presserklärungen von staatlichen oder quasi-staatlichen Institutionen unter Strafe stehen
+sollen: Entweder wissen diejenigen, die sie formuliert haben, nicht, wovon sie sprechen,
+dann habe sie die Strafe schon aus Inkompetenz verdient. Oder aber sie streuen mit Absicht
+Sand in die Augen der Öffentlichkeit - und das ist von einer staatlichen Institution nicht
+zu tolerieren.</p>
+<p>Ich sehe das letztlich als eine Versuch, Demokratie zu unterlaufen. "Häh, Demokratie?"
+wird sich da mancher fragen - "die versuchen doch nur ihren Arsch zu retten" (bzw ihr
+Gesicht zu wahren), "das würdest Du doch auch tun". Das ist aber doch so, dass das bei
+einer staatlichen Institution etwas anderes ist: Verantwortung kommt von "Antworten
+geben", und staatliche Institutionen sind letztlich dem Souverän verantwortlich: Der aber
+ist in einer zeitgenössischen Demokratie das Volk - also die breite Öffentlichkeit. Diese
+Antworten nicht zu geben, bzw. bewusst zu verbiegen ist faktisch ein Belügen des Souveräns
+- des eigentlichen Vorgesetzten. Das kommt nicht gut, zumindest in meinem Buch. Das ist
+keine Kleinigkeit. Ich denke, es sollte ein Straftat sein.</p>
+<p>Es ist nicht die erste Presserklärung, bei der ich das denke. Eigentlich habe ich den
+Eindruck, dass diese Art des <a href="http://en.wikipedia.org/wiki/On_Bullshit">bull shitting</a> bei sensiblen Themen eher die Norm als die
+Ausnahme geworden sind. Und langfristig für eine freie Demokratie viel gefährlicher als
+Terrorismus, <a href="http://ec.europa.eu/public_opinion/archives/eb/eb80/eb80_first_de.pdf">über dessen Relevanz man sich trefflich streiten könnte</a>.</p>
+<p>Ironisch ist im vorliegenden Fall noch, dass sich diese Helden mit dem oben zitierten
+Statement quasi selbst in den Fuß schießen. Der darauffolgende Absatz beginnt nämlich
+folgendermaßen:</p>
+<p>Zitat: <em>Laut fedpol haben die dänischen Behörden Massnahmen ergriffen, um die
+Sicherheitslücke zu schliessen. Ausserdem habe die EU eine Arbeitsgruppe mit
+Informatikexperten eingesetzt. Sie soll Massnahmen erarbeiten, damit sich ein solcher Fall
+nicht wiederholt.</em></p>
+<p>Man fragt sich dann unwillkürlich, von welchem Kaliber diese Maßnahmen wohl sein mögen,
+wenn doch "Codierung" bereits eine ernsthafte Zugangshürde sein soll ... Meine Zweifel
+jedenfalls sind schon geweckt. So kann man sich mit einer Nebelkerze den Rest der
+Presseerklärung auch effektiv kontaminieren.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Cyberpunk Rising]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising" />
+    <id>http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising</id>
+    <updated>2013-11-03T12:00:00Z</updated>
+    <published>2013-11-03T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <summary type="html"><![CDATA[Cyberpunk Rising]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising"><![CDATA[<p>Aus den aktuellen Nachrichten:
+<em> <a href="http://futurezone.at/digital-life/buegeleisen-infizieren-per-wlan-pcs-mit-malware/33.905.164/print">Bügeleisen infizieren per WLAN PCs mit Malware</a> 
+</em> <a href="http://www.heise.de/newsticker/meldung/Super-Malware-BadBIOS-wirft-Fragen-auf-2038240.html?view%3Dprint">Super-Malware "BadBIOS" wirft Fragen auf</a> </p>
+<p>Entweder drehen jetzt alle hohl, oder die <a href="http://en.wikipedia.org/wiki/Cyberpunk">Cyberpunk-Zukunft</a> rollt doch
+schneller auf uns zu, als ich erwartet hätte. Spannend. ;-)</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Kleines Make-Tutorial nun online]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013" />
+    <id>http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013</id>
+    <updated>2013-07-19T12:00:00Z</updated>
+    <published>2013-07-19T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="announcement" />
+    <category scheme="http://www.glitzersachen.de//blog" term="make-tutorial" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <category scheme="http://www.glitzersachen.de//blog" term="howto" />
+    <category scheme="http://www.glitzersachen.de//blog" term="blog" />
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="tutorial" />
+    <summary type="html"><![CDATA[Kleines Make-Tutorial nun online]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013"><![CDATA[<p>Das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a> aus <a href="http://www.teachswt.de">TeachSWT</a> ist jetzt <a href="http://www.teachswt.de">online</a>.</p>
+<p>Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
+einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.</p>
+<p>Das Tutorial ist eine Auskopplung aus <a href="http://www.teachswt.de">TeachSWT</a> und zwar aus <a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf">Lösung 4</a>. Ich hielt es
+Ende 2010 für lohnenswert, den Text als eigenes Dokument weiterzupflegen, und wandelte ihn
+Ende 2010 für ein Blog um, für das geplant war, es Ende 2010 online gehen zu lassen.  Die
+Umsetzung des Blogs wurde dann aus verschiedenen Gründen erst mal auf Eis gelegt.</p>
+<p>Aber jetzt gibt es wieder ein neues Blog und mit ihm das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a>, jetzt als
+Hypertext. Viel Spaß.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Diverse Quelltexte jetzt online]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online" />
+    <id>http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online</id>
+    <updated>2013-07-18T12:00:00Z</updated>
+    <published>2013-07-18T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <category scheme="http://www.glitzersachen.de//blog" term="u-pki" />
+    <category scheme="http://www.glitzersachen.de//blog" term="lsd-mount-utilities" />
+    <category scheme="http://www.glitzersachen.de//blog" term="mcalc" />
+    <summary type="html"><![CDATA[Diverse Quelltexte jetzt online]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online"><![CDATA[<p>Einige neue Goodies aus meinem Archiv: Die Quelltexte für <a href="http://github.com/m-e-leypold/mcalc">mcalc</a>, <a href="http://github.com/m-e-leypold/u-pki">u-pki</a> und
+<a href="http://github.com/m-e-leypold/lsd-mount-utilities">lsd-mount-utilities</a> sind jetzt (wieder) online.</p>
+<ul>
+<li>
+<p><a href="http://github.com/m-e-leypold/mcalc">MCalc</a>: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
+  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
+  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/u-pki">u-pki</a>: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
+  einfache Weise einzurichten und zu verwalten.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/lsd-mount-utilities">LSD Mount utilities</a>: The LSD mount utilities assist in setting up (creating) and
+   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.</p>
+</li>
+</ul>
+<p>They also enable users (not only root) to mount encrypted
+  filesystems if appropriate entries have been added to /etc/fstab.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+</feed>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>Glitzersachen.de</title>
+    <link>http://www.glitzersachen.de//blog</link>
+    <description>About things I find glittering at the roadside</description>
+    <pubDate>Mon, 13 Jan 2014 00:36:28 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Diverse Quelltexte jetzt online</title>
+      <link>http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online</link>
+      <pubDate>Thu, 18 Jul 2013 12:00:00 EDT</pubDate>
+      <category><![CDATA[news]]></category>
+      <category><![CDATA[de]]></category>
+      <category><![CDATA[u-pki]]></category>
+      <category><![CDATA[lsd-mount-utilities]]></category>
+      <category><![CDATA[mcalc]]></category>
+      <guid isPermaLink="false">EVgOSuSdlb4stO4LI5XiiESfT7M=</guid>
+      <description>Diverse Quelltexte jetzt online</description>
+      <content:encoded><![CDATA[<p>Einige neue Goodies aus meinem Archiv: Die Quelltexte für <a href="http://github.com/m-e-leypold/mcalc">mcalc</a>, <a href="http://github.com/m-e-leypold/u-pki">u-pki</a> und
+<a href="http://github.com/m-e-leypold/lsd-mount-utilities">lsd-mount-utilities</a> sind jetzt (wieder) online.</p>
+<ul>
+<li>
+<p><a href="http://github.com/m-e-leypold/mcalc">MCalc</a>: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
+  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
+  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/u-pki">u-pki</a>: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
+  einfache Weise einzurichten und zu verwalten.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/lsd-mount-utilities">LSD Mount utilities</a>: The LSD mount utilities assist in setting up (creating) and
+   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.</p>
+</li>
+</ul>
+<p>They also enable users (not only root) to mount encrypted
+  filesystems if appropriate entries have been added to /etc/fstab.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content:encoded>
+    </item>
+  </channel>
+</rss>

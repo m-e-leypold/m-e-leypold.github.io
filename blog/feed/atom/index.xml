@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">Glitzersachen.de</title>
+  <subtitle type="text">About things I find glittering at the roadside</subtitle>
+
+  <updated>2014-01-13T00:36:28Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://www.glitzersachen.de//blog" />
+  <id>http://www.glitzersachen.de//blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://www.glitzersachen.de//blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Leider nicht selten dämlich]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/12/27/leider-nicht-selten-damlich" />
+    <id>http://www.glitzersachen.de/blog/2013/12/27/leider-nicht-selten-damlich</id>
+    <updated>2013-12-27T12:00:00Z</updated>
+    <published>2013-12-27T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="blog" />
+    <category scheme="http://www.glitzersachen.de//blog" term="politics" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <summary type="html"><![CDATA[Leider nicht selten dämlich]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/12/27/leider-nicht-selten-damlich"><![CDATA[<p>Der <a href="http://www.nzz.ch/aktuell/schweiz/schengen-daten-in-daenemark-gestohlen-1.18210733">Neuen Züricher Zeitung zufolge</a> wurden aus dem Schengener
+Informationssystem Daten "gestohlen" (über die Anwendbarkeit des Wortes gestohlen kann man
+sich schon streiten: Unrechtmäßig kopiert ist ja nicht entwendet, letzteres impliziert ja
+ein Verschwinden am ursprünglichen Ort und mir scheint "gestohlen" dem "entwendet" doch
+näher zu sein - aber darum geht es hier nicht).</p>
+<p>Fedpol (die ermittelnde Behörde) dazu so: (Zitat) <em>Ausserdem seien die Angaben codiert und
+könnten somit nicht ohne weiteres verwendet werden. Bei der Codierung handelt es sich
+jedoch lediglich um einen Zahlencode für die jeweils angeordnete polizeiliche Massnahme,
+nicht aber um eine eigentliche Verschlüsselung</em>.</p>
+<p>Das ist ja wirklich ein riesige Hürde ...  Ich bin inzwischen ja der Ansicht, dass solche
+Presserklärungen von staatlichen oder quasi-staatlichen Institutionen unter Strafe stehen
+sollen: Entweder wissen diejenigen, die sie formuliert haben, nicht, wovon sie sprechen,
+dann habe sie die Strafe schon aus Inkompetenz verdient. Oder aber sie streuen mit Absicht
+Sand in die Augen der Öffentlichkeit - und das ist von einer staatlichen Institution nicht
+zu tolerieren.</p>
+<p>Ich sehe das letztlich als eine Versuch, Demokratie zu unterlaufen. "Häh, Demokratie?"
+wird sich da mancher fragen - "die versuchen doch nur ihren Arsch zu retten" (bzw ihr
+Gesicht zu wahren), "das würdest Du doch auch tun". Das ist aber doch so, dass das bei
+einer staatlichen Institution etwas anderes ist: Verantwortung kommt von "Antworten
+geben", und staatliche Institutionen sind letztlich dem Souverän verantwortlich: Der aber
+ist in einer zeitgenössischen Demokratie das Volk - also die breite Öffentlichkeit. Diese
+Antworten nicht zu geben, bzw. bewusst zu verbiegen ist faktisch ein Belügen des Souveräns
+- des eigentlichen Vorgesetzten. Das kommt nicht gut, zumindest in meinem Buch. Das ist
+keine Kleinigkeit. Ich denke, es sollte ein Straftat sein.</p>
+<p>Es ist nicht die erste Presserklärung, bei der ich das denke. Eigentlich habe ich den
+Eindruck, dass diese Art des <a href="http://en.wikipedia.org/wiki/On_Bullshit">bull shitting</a> bei sensiblen Themen eher die Norm als die
+Ausnahme geworden sind. Und langfristig für eine freie Demokratie viel gefährlicher als
+Terrorismus, <a href="http://ec.europa.eu/public_opinion/archives/eb/eb80/eb80_first_de.pdf">über dessen Relevanz man sich trefflich streiten könnte</a>.</p>
+<p>Ironisch ist im vorliegenden Fall noch, dass sich diese Helden mit dem oben zitierten
+Statement quasi selbst in den Fuß schießen. Der darauffolgende Absatz beginnt nämlich
+folgendermaßen:</p>
+<p>Zitat: <em>Laut fedpol haben die dänischen Behörden Massnahmen ergriffen, um die
+Sicherheitslücke zu schliessen. Ausserdem habe die EU eine Arbeitsgruppe mit
+Informatikexperten eingesetzt. Sie soll Massnahmen erarbeiten, damit sich ein solcher Fall
+nicht wiederholt.</em></p>
+<p>Man fragt sich dann unwillkürlich, von welchem Kaliber diese Maßnahmen wohl sein mögen,
+wenn doch "Codierung" bereits eine ernsthafte Zugangshürde sein soll ... Meine Zweifel
+jedenfalls sind schon geweckt. So kann man sich mit einer Nebelkerze den Rest der
+Presseerklärung auch effektiv kontaminieren.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Cyberpunk Rising]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising" />
+    <id>http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising</id>
+    <updated>2013-11-03T12:00:00Z</updated>
+    <published>2013-11-03T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <summary type="html"><![CDATA[Cyberpunk Rising]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/11/03/cyberpunk-rising"><![CDATA[<p>Aus den aktuellen Nachrichten:
+<em> <a href="http://futurezone.at/digital-life/buegeleisen-infizieren-per-wlan-pcs-mit-malware/33.905.164/print">Bügeleisen infizieren per WLAN PCs mit Malware</a> 
+</em> <a href="http://www.heise.de/newsticker/meldung/Super-Malware-BadBIOS-wirft-Fragen-auf-2038240.html?view%3Dprint">Super-Malware "BadBIOS" wirft Fragen auf</a> </p>
+<p>Entweder drehen jetzt alle hohl, oder die <a href="http://en.wikipedia.org/wiki/Cyberpunk">Cyberpunk-Zukunft</a> rollt doch
+schneller auf uns zu, als ich erwartet hätte. Spannend. ;-)</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Better deactivate the Linking Rule %: %.o in Makefiles]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/09/04/better-deactivate-the-linking-rule-:-o-in-makefiles" />
+    <id>http://www.glitzersachen.de/blog/2013/09/04/better-deactivate-the-linking-rule-:-o-in-makefiles</id>
+    <updated>2013-09-04T12:00:00Z</updated>
+    <published>2013-09-04T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="blog" />
+    <category scheme="http://www.glitzersachen.de//blog" term="techtip" />
+    <category scheme="http://www.glitzersachen.de//blog" term="make" />
+    <category scheme="http://www.glitzersachen.de//blog" term="en" />
+    <summary type="html"><![CDATA[Better deactivate the Linking Rule %: %.o in Makefiles]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/09/04/better-deactivate-the-linking-rule-:-o-in-makefiles"><![CDATA[<h3 id="tip-deactivate-the-linking-rule-o">Tip: Deactivate the Linking Rule %: %.o</h3>
+<p>Make has built-in rules to translate from C and C++ source to object files, to link object
+files to executables, but also a rule to compile from C and C++ source directly into an
+executable:</p>
+<pre><code>%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)
+%.o: %.cc: $(CXX) -c $(CPPFLAGS) $(CXXFLAGS)
+%:   %.o:  $(CC) $(LDFLAGS) N.o $(LOADLIBES) $(LDLIBS)
+</code></pre>
+<p>(This is what the <em>Gnu Make Manual</em> documents). In more complex makefiles it's not always
+evident, which path of translation will be chosen. It might be either of</p>
+<pre><code>foo.cc --&gt; foo.o --&gt; foo
+foo.cc --&gt; foo
+</code></pre>
+<p>With C source this is not a problem, but with C++ it is: One <a href="http://www.parashift.com/c++-faq/overview-mixing-langs.html">should not use the C
+compiler to link C++ programs</a>. There is more than one way to fix this
+problem, but I recommend (for reasons given below) to deactivate the built-in <em>'%: %.o'</em>
+rule, like this:</p>
+<pre><code>%.o: %: # deactivate built-in rule
+</code></pre>
+<h3 id="explanations">Explanations</h3>
+<h4 id="the-problem">The Problem</h4>
+<h5 id="what-happened-to-me">What happened to me</h5>
+<p>Empirically what I found, was the following. I had one (only one!) C++ source file in a
+directory. When calling make without a makefile, what I got was direct translation from
+source to executable (using <em>c++</em> or <em>g++</em> as compiler).</p>
+<pre><code>foo.cc --&gt; foo
+</code></pre>
+<p>When using a make file that <em>did not override</em> those rules, I got</p>
+<pre><code>foo.cc --&gt; foo.o --&gt; foo
+</code></pre>
+<p>The linking was done with <em>cc</em> which gives errors since <em>libstdc++</em> will not be linked in.
+To me it was (and is) not obvious why the other translation path was chosen in the latter
+case. I might had to do with the fact, that explicit dependencies (in this case: <em>foo.o:
+foo.c</em>) were give in the Makefile. I didn't bother to find out the exact reason for the
+observed behaviour. At the moment it is sufficient, that the reason is <em>not obvious</em> to
+make it into something that needs fixing. Behaviour with non obvious causes is a
+maintenance nightmare ...</p>
+<h5 id="the-symptoms">The Symptoms</h5>
+<p>Errors like the following occur, when linking with <em>cc</em>:</p>
+<pre><code>h1.o: In function `Needle::populate(int)':
+h1.cc:(.text+0x33): undefined reference to `operator new(unsigned int)'
+h1.o: In function `Needle::push(Disk*)':
+h1.cc:(.text+0xcf): undefined reference to `std::cerr'
+h1.cc:(.text+0xd4): undefined reference to `std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp; std::operator&lt;&lt; &lt;std::char_traits&lt;char&gt; &gt;(std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp;, char const*)'
+</code></pre>
+<p>... and so on (mostly I'm quoting them here for the search engine to find). This is, of
+course, because <em>cc</em> does not link in the standard C++ library, so there is none of the
+runtime available. One could try to specify the C++ runtime library in the libraries list
+(this works in my case), but the problem with that approach is that <em>only</em> the C++
+compiler will know best, which libraries to pick up for a proper C++ runtime environment.
+Next time or some time in the future - with another compiler version - it might be another
+additional library missing... - e.g. nobody and nothing guarantees AFIACS that <em>libstdc++</em>
+also contains the compiler runtime support procedures.</p>
+<p>So - one is supposed to leave the linking of C++ programs to the C++ compiler and not to
+the C compiler (and not to ld either). Regarding this, I find
+<a href="http://www.parashift.com/c++-faq/overview-mixing-langs.html">the C++ FAQ on my side</a>.</p>
+<h5 id="removing-the-built-in-rule">Removing the Built-in Rule</h5>
+<p>Removing the built-in rule with</p>
+<pre><code>%: %.o: # deactivate built-in rule
+</code></pre>
+<p>has the following advantages:</p>
+<ul>
+<li>It removes the ambiguity mentioned above regarding the canonical translation path. The
+  ambiguity is a nuisance anyway and difficult to recognize if a user has only superficial
+  knowledge about make.<br />
+</li>
+<li>It makes linking dependent on a language specific rule.</li>
+<li>And of course it fixes the problem under consideration by using the C++ compiler to
+  link.</li>
+</ul>
+<h5 id="a-small-disadvantage">A (small) Disadvantage</h5>
+<p>There is also a small disadvantage of the proposed solution: You will never see an object
+file corresponding to the main module of your program. Even if you create one explicitly,
+e.g. for testing purposes with</p>
+<pre><code>make foo.o CXXFLAGS='-O0 -g'
+</code></pre>
+<p>it won't be used when building <em>foo</em>. If you need this, I suggest to introduce
+a new suffix for object files stemming from C++ sources:</p>
+<pre><code>%.oo: %.cc: ; ... rule to translate from C++ source to object files ...
+%: %.oo:    ; ... rule to link C++ programs ...
+</code></pre>
+<p>and also deactivate the built-in rule that allows to create object files with <em>.o</em>-ending
+from C++ source.</p>
+<pre><code>%.o: %.cc: # deactivate built-in rule
+</code></pre>
+<h4 id="other-file-suffices">Other File Suffices</h4>
+<p>Note that <em>make</em> also supports <em>cpp</em> as suffix for C++ source files. If you have file
+ending in <em>cpp</em> in your project, you might have to substitute <em>.cc</em> by <em>.cpp</em> or duplicate
+the rules with <em>.cpp</em> instead of <em>.cc</em>.</p>
+<h4 id="alternative-solutions">Alternative Solutions</h4>
+<p>Here are some other fixes for the same problem that in my opinion do not work as well:</p>
+<ul>
+<li>
+<p><strong>LOADLIBES=-lstdc++</strong>: One could just add <em>LOADLIBES=-lstdc++</em> to the make arguments or
+  in the make file and the program would be linked properly. <em>Disadvantage</em>: As explained
+  above, the list of libraries to add might change with the compiler.</p>
+</li>
+<li>
+<p><strong>CC=c++</strong>: One could try to set <em>CC=c++</em>, thus linking C programs with the C++
+  compiler. This should work with most tool chains. <em>Disadvantage</em>: You might want to link
+  C++ and C code differently (to be specified as <em>CXXFLAGS</em> and <em>CFLAGS</em>). And it doesn't
+  resolve the ambiguity regarding the translation path. Personally I'm bothered by
+  indeterministic build processes, but YMMV.</p>
+</li>
+</ul>
+<h4 id="note">Note</h4>
+<p>I've resisted the temptation to title this post <em>'%: %.o' considered harmful</em>. There are -
+IMHO - to much opinion pieces floating around in the Internet which are titled like
+<em>Something considered harmful</em> without any sufficient reason or depth of thought.</p>
+<p>Which brings me to recognition of the fact that the insight in this post is mostly
+trivial: The post is too long for this and has taken me entirely too much time to write up
+(while my cat has been harassing me). I can already anticipate that this text will not
+make it in the printed volume <em>Best of Glitzersachen</em> ;-).</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->
+
+<!--  LocalWords:  YMMV behaviour Glitzersachen
+ -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Kleines Make-Tutorial nun online]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013" />
+    <id>http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013</id>
+    <updated>2013-07-19T12:00:00Z</updated>
+    <published>2013-07-19T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="announcement" />
+    <category scheme="http://www.glitzersachen.de//blog" term="make-tutorial" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <category scheme="http://www.glitzersachen.de//blog" term="howto" />
+    <category scheme="http://www.glitzersachen.de//blog" term="blog" />
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="tutorial" />
+    <summary type="html"><![CDATA[Kleines Make-Tutorial nun online]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013"><![CDATA[<p>Das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a> aus <a href="http://www.teachswt.de">TeachSWT</a> ist jetzt <a href="http://www.teachswt.de">online</a>.</p>
+<p>Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
+einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.</p>
+<p>Das Tutorial ist eine Auskopplung aus <a href="http://www.teachswt.de">TeachSWT</a> und zwar aus <a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf">Lösung 4</a>. Ich hielt es
+Ende 2010 für lohnenswert, den Text als eigenes Dokument weiterzupflegen, und wandelte ihn
+Ende 2010 für ein Blog um, für das geplant war, es Ende 2010 online gehen zu lassen.  Die
+Umsetzung des Blogs wurde dann aus verschiedenen Gründen erst mal auf Eis gelegt.</p>
+<p>Aber jetzt gibt es wieder ein neues Blog und mit ihm das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a>, jetzt als
+Hypertext. Viel Spaß.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Diverse Quelltexte jetzt online]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online" />
+    <id>http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online</id>
+    <updated>2013-07-18T12:00:00Z</updated>
+    <published>2013-07-18T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <category scheme="http://www.glitzersachen.de//blog" term="u-pki" />
+    <category scheme="http://www.glitzersachen.de//blog" term="lsd-mount-utilities" />
+    <category scheme="http://www.glitzersachen.de//blog" term="mcalc" />
+    <summary type="html"><![CDATA[Diverse Quelltexte jetzt online]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2013/07/18/diverse-quelltexte-jetzt-online"><![CDATA[<p>Einige neue Goodies aus meinem Archiv: Die Quelltexte für <a href="http://github.com/m-e-leypold/mcalc">mcalc</a>, <a href="http://github.com/m-e-leypold/u-pki">u-pki</a> und
+<a href="http://github.com/m-e-leypold/lsd-mount-utilities">lsd-mount-utilities</a> sind jetzt (wieder) online.</p>
+<ul>
+<li>
+<p><a href="http://github.com/m-e-leypold/mcalc">MCalc</a>: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
+  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
+  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/u-pki">u-pki</a>: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
+  einfache Weise einzurichten und zu verwalten.</p>
+</li>
+<li>
+<p><a href="http://github.com/m-e-leypold/lsd-mount-utilities">LSD Mount utilities</a>: The LSD mount utilities assist in setting up (creating) and
+   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.</p>
+</li>
+</ul>
+<p>They also enable users (not only root) to mount encrypted
+  filesystems if appropriate entries have been added to /etc/fstab.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+</feed>

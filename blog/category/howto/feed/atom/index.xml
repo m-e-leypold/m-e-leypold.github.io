@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">Glitzersachen.de</title>
+  <subtitle type="text">About things I find glittering at the roadside</subtitle>
+
+  <updated>2014-01-13T00:36:28Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://www.glitzersachen.de//blog" />
+  <id>http://www.glitzersachen.de//blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://www.glitzersachen.de//blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Kleines Make-Tutorial nun online]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013" />
+    <id>http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013</id>
+    <updated>2013-07-19T12:00:00Z</updated>
+    <published>2013-07-19T12:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="announcement" />
+    <category scheme="http://www.glitzersachen.de//blog" term="make-tutorial" />
+    <category scheme="http://www.glitzersachen.de//blog" term="de" />
+    <category scheme="http://www.glitzersachen.de//blog" term="howto" />
+    <category scheme="http://www.glitzersachen.de//blog" term="blog" />
+    <category scheme="http://www.glitzersachen.de//blog" term="news" />
+    <category scheme="http://www.glitzersachen.de//blog" term="tutorial" />
+    <summary type="html"><![CDATA[Kleines Make-Tutorial nun online]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/articles/articles/kleines-make-tutorial/announcement-2013"><![CDATA[<p>Das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a> aus <a href="http://www.teachswt.de">TeachSWT</a> ist jetzt <a href="http://www.teachswt.de">online</a>.</p>
+<p>Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
+einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.</p>
+<p>Das Tutorial ist eine Auskopplung aus <a href="http://www.teachswt.de">TeachSWT</a> und zwar aus <a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf">Lösung 4</a>. Ich hielt es
+Ende 2010 für lohnenswert, den Text als eigenes Dokument weiterzupflegen, und wandelte ihn
+Ende 2010 für ein Blog um, für das geplant war, es Ende 2010 online gehen zu lassen.  Die
+Umsetzung des Blogs wurde dann aus verschiedenen Gründen erst mal auf Eis gelegt.</p>
+<p>Aber jetzt gibt es wieder ein neues Blog und mit ihm das kleine <a href="/articles/kleines-make-tutorial">Make-Tutorial</a>, jetzt als
+Hypertext. Viel Spaß.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+</feed>
