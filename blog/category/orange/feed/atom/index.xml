@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">Glitzersachen.de</title>
+  <subtitle type="text">About things I find glittering at the roadside</subtitle>
+
+  <updated>2014-03-02T21:39:03Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://www.glitzersachen.de//blog" />
+  <id>http://www.glitzersachen.de//blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://www.glitzersachen.de//blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://www.glitzersachen.de//blog</uri>
+    </author>
+    <title type="html"><![CDATA[Thunfischsalat mit Orange]]></title>
+    <link rel="alternate" type="text/html" href="http://www.glitzersachen.de/blog/2014/03/01/thunfischsalat-mit-orange" />
+    <id>http://www.glitzersachen.de/blog/2014/03/01/thunfischsalat-mit-orange</id>
+    <updated>2014-03-01T16:00:00Z</updated>
+    <published>2014-03-01T16:00:00Z</published>
+    <category scheme="http://www.glitzersachen.de//blog" term="orange" />
+    <category scheme="http://www.glitzersachen.de//blog" term="rezepte" />
+    <category scheme="http://www.glitzersachen.de//blog" term="thunfisch" />
+    <summary type="html"><![CDATA[Thunfischsalat mit Orange]]></summary>
+    <content type="html" xml:base="http://www.glitzersachen.de/blog/2014/03/01/thunfischsalat-mit-orange"><![CDATA[<p>150 g Thunfisch (z.B. aus der Dose, wenn möglich im eigenen Saft -
+ich gehe aber davon aus, dass Thunfisch in Öl auch O.K. wäre, sofern man
+das Öl etwas abtropfen lässt).</p>
+<p>Der Saft einer kleinen Blutorange.</p>
+<p>Pfeffern, Dill, und, falls verfügbar, ein paar Tröpfchen Knoblauchöl.</p>
+<p>Guten Appetit.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content>
+  </entry>
+</feed>

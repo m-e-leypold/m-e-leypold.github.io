@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>Glitzersachen.de</title>
+    <link>http://www.glitzersachen.de//blog</link>
+    <description>About things I find glittering at the roadside</description>
+    <pubDate>Sun, 02 Mar 2014 21:39:03 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>Thunfischsalat mit Orange</title>
+      <link>http://www.glitzersachen.de/blog/2014/03/01/thunfischsalat-mit-orange</link>
+      <pubDate>Sat, 01 Mar 2014 16:00:00 EST</pubDate>
+      <category><![CDATA[orange]]></category>
+      <category><![CDATA[rezepte]]></category>
+      <category><![CDATA[thunfisch]]></category>
+      <guid isPermaLink="false">jQgO5emZBSun60smu6kFXu_9JWg=</guid>
+      <description>Thunfischsalat mit Orange</description>
+      <content:encoded><![CDATA[<p>150 g Thunfisch (z.B. aus der Dose, wenn möglich im eigenen Saft -
+ich gehe aber davon aus, dass Thunfisch in Öl auch O.K. wäre, sofern man
+das Öl etwas abtropfen lässt).</p>
+<p>Der Saft einer kleinen Blutorange.</p>
+<p>Pfeffern, Dill, und, falls verfügbar, ein paar Tröpfchen Knoblauchöl.</p>
+<p>Guten Appetit.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->]]></content:encoded>
+    </item>
+  </channel>
+</rss>
