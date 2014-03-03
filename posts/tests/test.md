@@ -1,0 +1,25 @@
+<!-- 
+.. title: Test
+.. slug: test
+.. date: 2014/03/03 10:34:38
+.. tags: blog test, draft
+.. link: 
+.. description: 
+.. type: text
+-->
+
+# Lorem ipsum dolor sit amet
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. 
+
+# Stet clita kasd gubergren
+
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+takimata sanctus est Lorem ipsum dolor sit amet.

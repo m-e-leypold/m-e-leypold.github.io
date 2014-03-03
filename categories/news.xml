@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (news)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/news.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 03 Mar 2014 14:26:35 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kleines Make-Tutorial nun online</title><link>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</link><description>&lt;div&gt;&lt;p&gt;Das kleine &lt;a href="http://www.glitzersachen.de/articles/kleines-make-tutorial"&gt;Make-Tutorial&lt;/a&gt; aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; ist jetzt &lt;a href="http://www.teachswt.de"&gt;online&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
+einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.&lt;/p&gt;
+&lt;p&gt;Das Tutorial ist eine Auskopplung aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; und zwar aus &lt;a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf"&gt;Lösung 4&lt;/a&gt;. Ich hielt es
+Ende 2010 für lohnenswert, den Text als eigenes Dokument weiterzupflegen, und wandelte ihn
+Ende 2010 für ein Blog um, für das geplant war, es Ende 2010 online gehen zu lassen.  Die
+Umsetzung des Blogs wurde dann aus verschiedenen Gründen erst mal auf Eis gelegt.&lt;/p&gt;
+&lt;p&gt;Aber jetzt gibt es wieder ein neues Blog und mit ihm das kleine &lt;a href="http://www.glitzersachen.de/articles/kleines-make-tutorial"&gt;Make-Tutorial&lt;/a&gt;, jetzt als
+Hypertext. Viel Spaß.&lt;/p&gt;
+&lt;p&gt;Update 2014-03-03: Das Tutorial ist im Laufe der &lt;a href="http://www.glitzersachen.de/announcements/now-on-nikola.html"&gt;Nikola Migration&lt;/a&gt;
+erst einmal unter den Tisch gefallen, also augenblicklich nicht mehr
+verfügbar.&lt;/p&gt;
+&lt;!-- Local Variables: --&gt;
+
+&lt;!-- mode: markdown --&gt;
+
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>news</category><category>announcement</category><category>blog</category><category>tutorial</category><category>howto</category><category>de</category><category>make-tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item><item><title>Diverse Quelltexte jetzt online</title><link>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</link><description>&lt;div&gt;&lt;p&gt;Einige neue Goodies aus meinem Archiv: Die Quelltexte für &lt;a href="http://github.com/m-e-leypold/mcalc"&gt;mcalc&lt;/a&gt;, &lt;a href="http://github.com/m-e-leypold/u-pki"&gt;u-pki&lt;/a&gt; und
+&lt;a href="http://github.com/m-e-leypold/lsd-mount-utilities"&gt;lsd-mount-utilities&lt;/a&gt; sind jetzt (wieder) online.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+&lt;p&gt;&lt;a href="http://github.com/m-e-leypold/mcalc"&gt;MCalc&lt;/a&gt;: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
+  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
+  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://github.com/m-e-leypold/u-pki"&gt;u-pki&lt;/a&gt;: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
+  einfache Weise einzurichten und zu verwalten.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://github.com/m-e-leypold/lsd-mount-utilities"&gt;LSD Mount utilities&lt;/a&gt;: The LSD mount utilities assist in setting up (creating) and
+   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;They also enable users (not only root) to mount encrypted
+  filesystems if appropriate entries have been added to /etc/fstab.&lt;/p&gt;
+&lt;!-- Local Variables: --&gt;
+
+&lt;!-- mode: markdown --&gt;
+
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>news</category><category>de</category><category>mcalc</category><category>u-pki</category><category>lsd-mount-utilities</category><guid>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</guid><pubDate>Thu, 18 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>
