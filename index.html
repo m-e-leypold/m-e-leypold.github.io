@@ -183,7 +183,7 @@ evident, which path of translation will be chosen. It might be either of</p>
 compiler to link C++ programs</a>. There is more than one way to fix this
 problem, but I recommend (for reasons given below) to deactivate the built-in <em>'%: %.o'</em>
 rule, like this:</p>
-<div class="code"><pre><span class="c">%.o: %: # deactivate built-in rule</span>
+<div class="code"><pre><span class="c">%: %.o # deactivate built-in rule</span>
 </pre></div>
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (blog)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/blog.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 03 Mar 2014 14:26:35 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Better deactivate the Linking Rule %: %.o in Makefiles</title><link>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</link><description>&lt;div&gt;&lt;h3&gt;Tip: Deactivate the Linking Rule %: %.o&lt;/h3&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (blog)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/blog.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 03 Mar 2014 14:44:44 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Better deactivate the Linking Rule %: %.o in Makefiles</title><link>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</link><description>&lt;div&gt;&lt;h3&gt;Tip: Deactivate the Linking Rule %: %.o&lt;/h3&gt;
 &lt;p&gt;Make has built-in rules to translate from C and C++ source to object files, to link object
 files to executables, but also a rule to compile from C and C++ source directly into an
 executable:&lt;/p&gt;
@@ -20,7 +20,7 @@ evident, which path of translation will be chosen. It might be either of&lt;/p&g
 compiler to link C++ programs&lt;/a&gt;. There is more than one way to fix this
 problem, but I recommend (for reasons given below) to deactivate the built-in &lt;em&gt;'%: %.o'&lt;/em&gt;
 rule, like this:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%.o: %: # deactivate built-in rule&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%: %.o # deactivate built-in rule&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

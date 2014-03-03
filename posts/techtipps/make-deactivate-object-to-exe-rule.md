@@ -34,7 +34,7 @@ compiler to link C++ programs][c++-faq-mixing]. There is more than one way to fi
 problem, but I recommend (for reasons given below) to deactivate the built-in *'%: %.o'*
 rule, like this:
 
-    %.o: %: # deactivate built-in rule
+    %: %.o # deactivate built-in rule
 
 # Explanations
 ## The Problem
