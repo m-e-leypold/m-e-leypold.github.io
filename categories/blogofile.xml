@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (blogofile)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/blogofile.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 03 Mar 2014 14:44:44 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Now running on Blogofile</title><link>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</link><description>&lt;div&gt;&lt;h3&gt;Switching to Blogofile&lt;/h3&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (blogofile)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/blogofile.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 04 Mar 2014 18:12:26 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Now running on Blogofile</title><link>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</link><description>&lt;div&gt;&lt;h2&gt;Switching to Blogofile&lt;/h2&gt;
 &lt;p&gt;Two weeks ago I changed the way this blog is maintained (if "maintained" is the right word
 for the current low frequency of posts).&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;
@@ -10,7 +10,7 @@ for the current low frequency of posts).&lt;/p&gt;
 &lt;p&gt;Now I'm using &lt;a href="http://www.blogofile.com"&gt;Blogofile&lt;/a&gt; and pages are generated locally. Comments are supported via
   &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;Still not satisfied&lt;/h3&gt;
+&lt;/ul&gt;&lt;h2&gt;Still not satisfied&lt;/h2&gt;
 &lt;p&gt;I'm still not satisfied. Why? There are two aspects: I don't like &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt;, not because it
 is technically inferior (it is not), but more for philosphical/political reasons. This -
 in time - merits a separate article. The other points is, that &lt;a href="http://www.blogofile.com"&gt;Blogofile&lt;/a&gt; - somehow -

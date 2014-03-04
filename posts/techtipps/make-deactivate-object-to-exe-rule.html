@@ -61,8 +61,7 @@
 		
     </small>
     <hr><div class="e-content" itemprop="articleBody text">
-    <div><h3>Tip: Deactivate the Linking Rule %: %.o</h3>
-<p>Make has built-in rules to translate from C and C++ source to object files, to link object
+    <div><p>Make has built-in rules to translate from C and C++ source to object files, to link object
 files to executables, but also a rule to compile from C and C++ source directly into an
 executable:</p>
 <div class="code"><pre><span class="c">%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)</span>
@@ -86,9 +85,11 @@ rule, like this:</p>
 </pre></div>
 
 
-<h3>Explanations</h3>
-<h4>The Problem</h4>
-<h5>What happened to me</h5>
+<!-- TEASER_END -->
+
+<h2>Explanations</h2>
+<h3>The Problem</h3>
+<h4>What happened to me</h4>
 <p>Empirically what I found, was the following. I had one (only one!) C++ source file in a
 directory. When calling make without a makefile, what I got was direct translation from
 source to executable (using <em>c++</em> or <em>g++</em> as compiler).</p>
@@ -108,7 +109,7 @@ foo.c</em>) were give in the Makefile. I didn't bother to find out the exact rea
 observed behaviour. At the moment it is sufficient, that the reason is <em>not obvious</em> to
 make it into something that needs fixing. Behaviour with non obvious causes is a
 maintenance nightmare ...</p>
-<h5>The Symptoms</h5>
+<h4>The Symptoms</h4>
 <p>Errors like the following occur, when linking with <em>cc</em>:</p>
 <div class="code"><pre><span class="nx">h1.o</span><span class="p">:</span> <span class="k">In</span> <span class="nx">function</span> <span class="sb">`Needle::populate(int)':</span>
 <span class="sb">h1.cc:(.text+0x33): undefined reference to `</span><span class="nx">operator</span> <span class="nb">new</span><span class="p">(</span><span class="nx">unsigned</span> <span class="nx">int</span><span class="p">)</span><span class="s1">'</span>
@@ -129,7 +130,7 @@ also contains the compiler runtime support procedures.</p>
 <p>So - one is supposed to leave the linking of C++ programs to the C++ compiler and not to
 the C compiler (and not to ld either). Regarding this, I find
 <a href="http://www.parashift.com/c++-faq/overview-mixing-langs.html">the C++ FAQ on my side</a>.</p>
-<h5>Removing the Built-in Rule</h5>
+<h4>Removing the Built-in Rule</h4>
 <p>Removing the built-in rule with</p>
 <div class="code"><pre><span class="c">%: %.o: # deactivate built-in rule</span>
 </pre></div>
@@ -142,7 +143,7 @@ the C compiler (and not to ld either). Regarding this, I find
 <li>It makes linking dependent on a language specific rule.</li>
 <li>And of course it fixes the problem under consideration by using the C++ compiler to
   link.</li>
-</ul><h5>A (small) Disadvantage</h5>
+</ul><h4>A (small) Disadvantage</h4>
 <p>There is also a small disadvantage of the proposed solution: You will never see an object
 file corresponding to the main module of your program. Even if you create one explicitly,
 e.g. for testing purposes with</p>
@@ -163,11 +164,11 @@ from C++ source.</p>
 </pre></div>
 
 
-<h4>Other File Suffices</h4>
+<h3>Other File Suffices</h3>
 <p>Note that <em>make</em> also supports <em>cpp</em> as suffix for C++ source files. If you have file
 ending in <em>cpp</em> in your project, you might have to substitute <em>.cc</em> by <em>.cpp</em> or duplicate
 the rules with <em>.cpp</em> instead of <em>.cc</em>.</p>
-<h4>Alternative Solutions</h4>
+<h3>Alternative Solutions</h3>
 <p>Here are some other fixes for the same problem that in my opinion do not work as well:</p>
 <ul><li>
 <p><strong>LOADLIBES=-lstdc++</strong>: One could just add <em>LOADLIBES=-lstdc++</em> to the make arguments or
@@ -181,7 +182,7 @@ the rules with <em>.cpp</em> instead of <em>.cc</em>.</p>
   resolve the ambiguity regarding the translation path. Personally I'm bothered by
   indeterministic build processes, but YMMV.</p>
 </li>
-</ul><h4>Note</h4>
+</ul><h3>Note</h3>
 <p>I've resisted the temptation to title this post <em>'%: %.o' considered harmful</em>. There are -
 IMHO - to much opinion pieces floating around in the Internet which are titled like
 <em>Something considered harmful</em> without any sufficient reason or depth of thought.</p>

@@ -13,7 +13,6 @@
             in your Makefile in order to avoid unwelcome surprise"
 -->
 
-# Tip: Deactivate the Linking Rule %: %.o
 
 Make has built-in rules to translate from C and C++ source to object files, to link object
 files to executables, but also a rule to compile from C and C++ source directly into an
@@ -35,6 +34,8 @@ problem, but I recommend (for reasons given below) to deactivate the built-in *'
 rule, like this:
 
     %: %.o # deactivate built-in rule
+
+<!-- TEASER_END -->
 
 # Explanations
 ## The Problem
