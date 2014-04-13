@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (thunfisch)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/thunfisch.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 04 Mar 2014 18:12:26 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thunfisch-Salat mit Orange</title><link>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</link><description>&lt;div&gt;&lt;p&gt;150 g Thunfisch (z.B. aus der Dose, wenn möglich im eigenen Saft -
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (thunfisch)</title><link>http://www.glitzersachen.de</link><description></description><language>en</language><lastBuildDate>Sun, 13 Apr 2014 23:16:42 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thunfisch-Salat mit Orange</title><link>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;150 g Thunfisch (z.B. aus der Dose, wenn möglich im eigenen Saft -
 ich gehe aber davon aus, dass Thunfisch in Öl auch O.K. wäre, sofern man
 das Öl etwas abtropfen lässt).&lt;/p&gt;
 &lt;p&gt;Der Saft einer kleinen Blutorange.&lt;/p&gt;
@@ -9,4 +9,4 @@ das Öl etwas abtropfen lässt).&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>rezepte</category><category>thunfisch</category><category>orange</category><guid>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</guid><pubDate>Sat, 01 Mar 2014 16:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>orange</category><category>rezepte</category><category>thunfisch</category><guid>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</guid><pubDate>Sat, 01 Mar 2014 16:00:00 GMT</pubDate></item></channel></rss>

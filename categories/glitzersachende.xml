@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (glitzersachen.de)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/glitzersachende.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 04 Mar 2014 18:12:26 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Glitzersachen now on Nikola</title><link>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</link><description>&lt;div&gt;&lt;p&gt;Glitzersachen.de is generated with &lt;a href="http://www.getnikola.com"&gt;Nikola&lt;/a&gt; now. Most of the static
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (glitzersachen.de)</title><link>http://www.glitzersachen.de</link><description></description><language>en</language><lastBuildDate>Sun, 13 Apr 2014 23:16:42 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Glitzersachen now on Nikola</title><link>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Glitzersachen.de is generated with &lt;a href="http://www.getnikola.com"&gt;Nikola&lt;/a&gt; now. Most of the static
 content - which was mostly navigation anyway - went away during
 migration. For the moment Glitzersachen.de will be a "pure" Blog.&lt;/p&gt;
 &lt;p&gt;Some of it will come back, though I don't know when, yet. My current
 priority is more what I can do with Nikola and how I can style or
-modify the theme. &lt;/p&gt;&lt;/div&gt;</description><category>glitzersachen.de</category><category>announcement</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</guid><pubDate>Mon, 03 Mar 2014 12:16:42 GMT</pubDate></item><item><title>Now running on Blogofile</title><link>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</link><description>&lt;div&gt;&lt;h2&gt;Switching to Blogofile&lt;/h2&gt;
+modify the theme. &lt;/p&gt;&lt;/div&gt;</description><category>announcement</category><category>glitzersachen.de</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</guid><pubDate>Mon, 03 Mar 2014 12:16:42 GMT</pubDate></item><item><title>Now running on Blogofile</title><link>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;h2&gt;Switching to Blogofile&lt;/h2&gt;
 &lt;p&gt;Two weeks ago I changed the way this blog is maintained (if "maintained" is the right word
 for the current low frequency of posts).&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;Previously I've been using &lt;a href="http://jekyllrb.com%E2%80%8E"&gt;Jekyll&lt;/a&gt; and pages were generated server side on the github
   servers. There were no comments.&lt;/p&gt;
 &lt;/li&gt;
@@ -15,7 +16,8 @@ for the current low frequency of posts).&lt;/p&gt;
 &lt;p&gt;Now I'm using &lt;a href="http://www.blogofile.com"&gt;Blogofile&lt;/a&gt; and pages are generated locally. Comments are supported via
   &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;Still not satisfied&lt;/h2&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Still not satisfied&lt;/h2&gt;
 &lt;p&gt;I'm still not satisfied. Why? There are two aspects: I don't like &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt;, not because it
 is technically inferior (it is not), but more for philosphical/political reasons. This -
 in time - merits a separate article. The other points is, that &lt;a href="http://www.blogofile.com"&gt;Blogofile&lt;/a&gt; - somehow -
@@ -33,4 +35,4 @@ will turn out to last a bit longer.&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>glitzersachen.de</category><category>announcement</category><category>blogofile</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</guid><pubDate>Sun, 02 Feb 2014 12:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blogofile</category><category>glitzersachen.de</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</guid><pubDate>Sun, 02 Feb 2014 12:00:00 GMT</pubDate></item></channel></rss>

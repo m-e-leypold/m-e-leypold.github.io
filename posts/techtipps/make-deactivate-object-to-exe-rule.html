@@ -1,6 +1,28 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="M E Leypold"><title>Better deactivate the Linking Rule %: %.o in Makefiles | Glitzersachen.de</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html"><!--[if lt IE 9]>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset="utf-8">
+    <meta name="author" content="M E Leypold">
+    <title>Better deactivate the Linking Rule %: %.o in Makefiles | Glitzersachen.de</title>
+    
+            <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+      <link rel="canonical" href="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html">
+    <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+    <![endif]-->
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+    
+
+
+
+
+
+    
+</head>
+<body>
 <!-- Menubar -->
 <div class="navbar navbar-fixed-top" id="navbar">
     <div class="navbar-inner">
@@ -18,16 +40,31 @@
             </a>
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-                </li><li><a href="../../categories/index.html">Tags</a>
-                </li><li><a href="../../teachswt.html">TeachSWT</a>
-                </li><li><a href="../../rss.xml">RSS Feed</a>
+                <ul class="nav">
+                    
+                <li>
+<a href="../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../teachswt.html">TeachSWT</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS Feed</a>
 
-                </li></ul><ul class="nav pull-right"><li><a href="../../about.html#impressum">Imprint/Impressum</a></li>
+                </li>
+</ul>
+                <ul class="nav pull-right">
+                
+                
+		    <li><a href="../../about.html#impressum">Imprint/Impressum</a></li>
                     <li>
 			<a href="make-deactivate-object-to-exe-rule.md" id="sourcelink">Source</a>
 		</li>
-                </ul></div>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -38,11 +75,13 @@
     <div class="span2"></div>
     <div class="span8">
     
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <article class="postbox post-text">
+    <div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
     
     <h1 class="p-name" itemprop="headline name">Better deactivate the Linking Rule %: %.o in Makefiles</h1>
 
-    <hr><small>
+    <hr>
+    <small>
         Posted: <time class="published dt-published" datetime="2013-09-04T12:00:00+00:00" itemprop="datePublished">2013-09-04 12:00</time>
         
 
@@ -51,20 +90,22 @@
         More posts about 
     <span itemprop="keywords">
         <a class="tag p-category" href="../../categories/blog.html"><span class="badge badge-info">blog</span></a>
-        <a class="tag p-category" href="../../categories/techtip.html"><span class="badge badge-info">techtip</span></a>
-        <a class="tag p-category" href="../../categories/make.html"><span class="badge badge-info">make</span></a>
         <a class="tag p-category" href="../../categories/en.html"><span class="badge badge-info">en</span></a>
+        <a class="tag p-category" href="../../categories/make.html"><span class="badge badge-info">make</span></a>
+        <a class="tag p-category" href="../../categories/techtip.html"><span class="badge badge-info">techtip</span></a>
     </span>
 
 
           |  
 		
     </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p>Make has built-in rules to translate from C and C++ source to object files, to link object
+    <hr>
+    <div class="e-content" itemprop="articleBody text">
+    <div>
+<p>Make has built-in rules to translate from C and C++ source to object files, to link object
 files to executables, but also a rule to compile from C and C++ source directly into an
 executable:</p>
-<div class="code"><pre><span class="c">%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)</span>
+<div class="codehilite"><pre><span class="c">%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)</span>
 <span class="c">%.o: %.cc: $(CXX) -c $(CPPFLAGS) $(CXXFLAGS)</span>
 <span class="c">%:   %.o:  $(CC) $(LDFLAGS) N.o $(LOADLIBES) $(LDLIBS)</span>
 </pre></div>
@@ -72,7 +113,7 @@ executable:</p>
 
 <p>(This is what the <em>Gnu Make Manual</em> documents). In more complex makefiles it's not always
 evident, which path of translation will be chosen. It might be either of</p>
-<div class="code"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="o">--&gt;</span> <span class="n">foo</span>
+<div class="codehilite"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="o">--&gt;</span> <span class="n">foo</span>
 <span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span>
 </pre></div>
 
@@ -81,7 +122,7 @@ evident, which path of translation will be chosen. It might be either of</p>
 compiler to link C++ programs</a>. There is more than one way to fix this
 problem, but I recommend (for reasons given below) to deactivate the built-in <em>'%: %.o'</em>
 rule, like this:</p>
-<div class="code"><pre><span class="c">%: %.o # deactivate built-in rule</span>
+<div class="codehilite"><pre><span class="c">%: %.o # deactivate built-in rule</span>
 </pre></div>
 
 
@@ -93,12 +134,12 @@ rule, like this:</p>
 <p>Empirically what I found, was the following. I had one (only one!) C++ source file in a
 directory. When calling make without a makefile, what I got was direct translation from
 source to executable (using <em>c++</em> or <em>g++</em> as compiler).</p>
-<div class="code"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span>
+<div class="codehilite"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span>
 </pre></div>
 
 
 <p>When using a make file that <em>did not override</em> those rules, I got</p>
-<div class="code"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="o">--&gt;</span> <span class="n">foo</span>
+<div class="codehilite"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="o">--&gt;</span> <span class="n">foo</span>
 </pre></div>
 
 
@@ -111,7 +152,7 @@ make it into something that needs fixing. Behaviour with non obvious causes is a
 maintenance nightmare ...</p>
 <h4>The Symptoms</h4>
 <p>Errors like the following occur, when linking with <em>cc</em>:</p>
-<div class="code"><pre><span class="nx">h1.o</span><span class="p">:</span> <span class="k">In</span> <span class="nx">function</span> <span class="sb">`Needle::populate(int)':</span>
+<div class="codehilite"><pre><span class="nx">h1.o</span><span class="p">:</span> <span class="k">In</span> <span class="nx">function</span> <span class="sb">`Needle::populate(int)':</span>
 <span class="sb">h1.cc:(.text+0x33): undefined reference to `</span><span class="nx">operator</span> <span class="nb">new</span><span class="p">(</span><span class="nx">unsigned</span> <span class="nx">int</span><span class="p">)</span><span class="s1">'</span>
 <span class="s1">h1.o: In function `Needle::push(Disk*)'</span><span class="p">:</span>
 <span class="nx">h1.cc</span><span class="p">:(</span><span class="bp">.</span><span class="nx">text</span><span class="o">+</span><span class="mh">0xcf</span><span class="p">):</span> <span class="nx">undefined</span> <span class="nb">reference</span> <span class="k">to</span> <span class="sb">`std::cerr'</span>
@@ -132,35 +173,37 @@ the C compiler (and not to ld either). Regarding this, I find
 <a href="http://www.parashift.com/c++-faq/overview-mixing-langs.html">the C++ FAQ on my side</a>.</p>
 <h4>Removing the Built-in Rule</h4>
 <p>Removing the built-in rule with</p>
-<div class="code"><pre><span class="c">%: %.o: # deactivate built-in rule</span>
+<div class="codehilite"><pre><span class="c">%: %.o: # deactivate built-in rule</span>
 </pre></div>
 
 
 <p>has the following advantages:</p>
-<ul><li>It removes the ambiguity mentioned above regarding the canonical translation path. The
+<ul>
+<li>It removes the ambiguity mentioned above regarding the canonical translation path. The
   ambiguity is a nuisance anyway and difficult to recognize if a user has only superficial
   knowledge about make.  </li>
 <li>It makes linking dependent on a language specific rule.</li>
 <li>And of course it fixes the problem under consideration by using the C++ compiler to
   link.</li>
-</ul><h4>A (small) Disadvantage</h4>
+</ul>
+<h4>A (small) Disadvantage</h4>
 <p>There is also a small disadvantage of the proposed solution: You will never see an object
 file corresponding to the main module of your program. Even if you create one explicitly,
 e.g. for testing purposes with</p>
-<div class="code"><pre><span class="n">make</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="n">CXXFLAGS</span><span class="o">=</span><span class="s">"-O0 -g"</span>
+<div class="codehilite"><pre><span class="n">make</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="n">CXXFLAGS</span><span class="o">=</span><span class="s">"-O0 -g"</span>
 </pre></div>
 
 
 <p>it won't be used when building <em>foo</em>. If you need this, I suggest to introduce
 a new suffix for object files stemming from C++ sources:</p>
-<div class="code"><pre><span class="c">%.oo: %.cc: ; ... rule to translate from C++ source to object files ...</span>
+<div class="codehilite"><pre><span class="c">%.oo: %.cc: ; ... rule to translate from C++ source to object files ...</span>
 <span class="c">%: %.oo:    ; ... rule to link C++ programs ...</span>
 </pre></div>
 
 
 <p>and also deactivate the built-in rule that allows to create object files with <em>.o</em>-ending
 from C++ source.</p>
-<div class="code"><pre><span class="c">%.o: %.cc: # deactivate built-in rule</span>
+<div class="codehilite"><pre><span class="c">%.o: %.cc: # deactivate built-in rule</span>
 </pre></div>
 
 
@@ -170,7 +213,8 @@ ending in <em>cpp</em> in your project, you might have to substitute <em>.cc</em
 the rules with <em>.cpp</em> instead of <em>.cc</em>.</p>
 <h3>Alternative Solutions</h3>
 <p>Here are some other fixes for the same problem that in my opinion do not work as well:</p>
-<ul><li>
+<ul>
+<li>
 <p><strong>LOADLIBES=-lstdc++</strong>: One could just add <em>LOADLIBES=-lstdc++</em> to the make arguments or
   in the make file and the program would be linked properly. <em>Disadvantage</em>: As explained
   above, the list of libraries to add might change with the compiler.</p>
@@ -182,7 +226,8 @@ the rules with <em>.cpp</em> instead of <em>.cc</em>.</p>
   resolve the ambiguity regarding the translation path. Personally I'm bothered by
   indeterministic build processes, but YMMV.</p>
 </li>
-</ul><h3>Note</h3>
+</ul>
+<h3>Note</h3>
 <p>I've resisted the temptation to title this post <em>'%: %.o' considered harmful</em>. There are -
 IMHO - to much opinion pieces floating around in the Internet which are titled like
 <em>Something considered harmful</em> without any sufficient reason or depth of thought.</p>
@@ -197,17 +242,23 @@ make it in the printed volume <em>Best of Glitzersachen</em> ;-).</p>
 <!-- End: -->
 
 <!--  LocalWords:  YMMV behaviour Glitzersachen
- --></div>
+ -->
+</div>
     </div>
     </div>
     
-        <ul class="pager"><li class="previous">
+        <ul class="pager">
+            <li class="previous">
                 <a href="../announcements/announce-make-tutorial.html" rel="prev">← Previous post</a>
             </li>
             <li class="next">
                 <a href="../in-the-news/cyberpunk-rising.html" rel="next">Next post →</a>
             </li>
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+        
+        
+        <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="glitzersachen-de",
             disqus_url="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html",
@@ -221,13 +272,17 @@ make it in the printed volume <em>Best of Glitzersachen</em> ;-).</p>
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
     <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
     
 
-    </article></div>
+    </article>
+
+    </div>
     </div>
     <!--End of body content-->
 </div>
@@ -235,11 +290,20 @@ make it in the printed volume <em>Best of Glitzersachen</em> ;-).</p>
     Contents © 2014         <a href="../../about.html#impressum">M E Leypold</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 </div>
 
-            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script>
+
+
+    
+
+    <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
     $(window).on('hashchange', function(){
         if (location.hash && $(location.hash)[0]) {
             $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
         }
     });
     $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+    </script>
+    
+    
+</body>
+</html>

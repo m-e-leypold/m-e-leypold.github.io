@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de</title><link>http://www.glitzersachen.de</link><description>About things I find glittering at the road side</description><atom:link href="http://www.glitzersachen.de/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 04 Mar 2014 18:12:26 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Glitzersachen now on Nikola</title><link>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</link><description>&lt;div&gt;&lt;p&gt;Glitzersachen.de is generated with &lt;a href="http://www.getnikola.com"&gt;Nikola&lt;/a&gt; now. Most of the static
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de</title><link>http://www.glitzersachen.de</link><description>About things I find glittering at the road side</description><language>en</language><lastBuildDate>Sun, 13 Apr 2014 23:16:42 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Glitzersachen now on Nikola</title><link>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Glitzersachen.de is generated with &lt;a href="http://www.getnikola.com"&gt;Nikola&lt;/a&gt; now. Most of the static
 content - which was mostly navigation anyway - went away during
 migration. For the moment Glitzersachen.de will be a "pure" Blog.&lt;/p&gt;
 &lt;p&gt;Some of it will come back, though I don't know when, yet. My current
 priority is more what I can do with Nikola and how I can style or
-modify the theme. &lt;/p&gt;&lt;/div&gt;</description><category>glitzersachen.de</category><category>announcement</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</guid><pubDate>Mon, 03 Mar 2014 12:16:42 GMT</pubDate></item><item><title>Thunfisch-Salat mit Orange</title><link>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</link><description>&lt;div&gt;&lt;p&gt;150 g Thunfisch (z.B. aus der Dose, wenn möglich im eigenen Saft -
+modify the theme. &lt;/p&gt;&lt;/div&gt;</description><category>announcement</category><category>glitzersachen.de</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-nikola.html</guid><pubDate>Mon, 03 Mar 2014 12:16:42 GMT</pubDate></item><item><title>Thunfisch-Salat mit Orange</title><link>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;150 g Thunfisch (z.B. aus der Dose, wenn möglich im eigenen Saft -
 ich gehe aber davon aus, dass Thunfisch in Öl auch O.K. wäre, sofern man
 das Öl etwas abtropfen lässt).&lt;/p&gt;
 &lt;p&gt;Der Saft einer kleinen Blutorange.&lt;/p&gt;
@@ -14,10 +14,11 @@ das Öl etwas abtropfen lässt).&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>rezepte</category><category>thunfisch</category><category>orange</category><guid>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</guid><pubDate>Sat, 01 Mar 2014 16:00:00 GMT</pubDate></item><item><title>Now running on Blogofile</title><link>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</link><description>&lt;div&gt;&lt;h2&gt;Switching to Blogofile&lt;/h2&gt;
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>orange</category><category>rezepte</category><category>thunfisch</category><guid>http://www.glitzersachen.de/posts/cooking/thunfisch-salat-mit-orange.html</guid><pubDate>Sat, 01 Mar 2014 16:00:00 GMT</pubDate></item><item><title>Now running on Blogofile</title><link>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;h2&gt;Switching to Blogofile&lt;/h2&gt;
 &lt;p&gt;Two weeks ago I changed the way this blog is maintained (if "maintained" is the right word
 for the current low frequency of posts).&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;Previously I've been using &lt;a href="http://jekyllrb.com%E2%80%8E"&gt;Jekyll&lt;/a&gt; and pages were generated server side on the github
   servers. There were no comments.&lt;/p&gt;
 &lt;/li&gt;
@@ -25,7 +26,8 @@ for the current low frequency of posts).&lt;/p&gt;
 &lt;p&gt;Now I'm using &lt;a href="http://www.blogofile.com"&gt;Blogofile&lt;/a&gt; and pages are generated locally. Comments are supported via
   &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;Still not satisfied&lt;/h2&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Still not satisfied&lt;/h2&gt;
 &lt;p&gt;I'm still not satisfied. Why? There are two aspects: I don't like &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt;, not because it
 is technically inferior (it is not), but more for philosphical/political reasons. This -
 in time - merits a separate article. The other points is, that &lt;a href="http://www.blogofile.com"&gt;Blogofile&lt;/a&gt; - somehow -
@@ -43,7 +45,7 @@ will turn out to last a bit longer.&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>glitzersachen.de</category><category>announcement</category><category>blogofile</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</guid><pubDate>Sun, 02 Feb 2014 12:00:00 GMT</pubDate></item><item><title>Leider nicht selten dämlich</title><link>http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html</link><description>&lt;div&gt;&lt;p&gt;Der &lt;a href="http://www.nzz.ch/aktuell/schweiz/schengen-daten-in-daenemark-gestohlen-1.18210733"&gt;Neuen Züricher Zeitung zufolge&lt;/a&gt; wurden aus dem Schengener
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blogofile</category><category>glitzersachen.de</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</guid><pubDate>Sun, 02 Feb 2014 12:00:00 GMT</pubDate></item><item><title>Leider nicht selten dämlich</title><link>http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Der &lt;a href="http://www.nzz.ch/aktuell/schweiz/schengen-daten-in-daenemark-gestohlen-1.18210733"&gt;Neuen Züricher Zeitung zufolge&lt;/a&gt; wurden aus dem Schengener
 Informationssystem Daten "gestohlen" (über die Anwendbarkeit des Wortes gestohlen kann man
 sich schon streiten: Unrechtmäßig kopiert ist ja nicht entwendet, letzteres impliziert ja
 ein Verschwinden am ursprünglichen Ort und mir scheint "gestohlen" dem "entwendet" doch
@@ -52,7 +54,8 @@ näher zu sein - aber darum geht es hier nicht).&lt;/p&gt;
 könnten somit nicht ohne weiteres verwendet werden. Bei der Codierung handelt es sich
 jedoch lediglich um einen Zahlencode für die jeweils angeordnete polizeiliche Massnahme,
 nicht aber um eine eigentliche Verschlüsselung&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Das ist ja wirklich ein riesige Hürde ...&lt;br&gt;&lt;/p&gt;&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>politics</category><category>de</category><guid>http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html</guid><pubDate>Fri, 27 Dec 2013 12:00:00 GMT</pubDate></item><item><title>Cyberpunk Rising</title><link>http://www.glitzersachen.de/posts/in-the-news/cyberpunk-rising.html</link><description>&lt;div&gt;&lt;p&gt;Aus den aktuellen Nachrichten:
+&lt;p&gt;Das ist ja wirklich ein riesige Hürde ...&lt;br&gt;
+&lt;/p&gt;&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>de</category><category>politics</category><guid>http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html</guid><pubDate>Fri, 27 Dec 2013 12:00:00 GMT</pubDate></item><item><title>Cyberpunk Rising</title><link>http://www.glitzersachen.de/posts/in-the-news/cyberpunk-rising.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Aus den aktuellen Nachrichten:
 &lt;em&gt; &lt;a href="http://futurezone.at/digital-life/buegeleisen-infizieren-per-wlan-pcs-mit-malware/33.905.164/print"&gt;Bügeleisen infizieren per WLAN PCs mit Malware&lt;/a&gt; 
 &lt;/em&gt; &lt;a href="http://www.heise.de/newsticker/meldung/Super-Malware-BadBIOS-wirft-Fragen-auf-2038240.html?view%3Dprint"&gt;Super-Malware "BadBIOS" wirft Fragen auf&lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;Entweder drehen jetzt alle hohl, oder die &lt;a href="http://en.wikipedia.org/wiki/Cyberpunk"&gt;Cyberpunk-Zukunft&lt;/a&gt; rollt doch
@@ -61,10 +64,10 @@ schneller auf uns zu, als ich erwartet hätte. Spannend. ;-)&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>in the news</category><category>de</category><guid>http://www.glitzersachen.de/posts/in-the-news/cyberpunk-rising.html</guid><pubDate>Sun, 03 Nov 2013 12:00:00 GMT</pubDate></item><item><title>Better deactivate the Linking Rule %: %.o in Makefiles</title><link>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</link><description>&lt;div&gt;&lt;p&gt;Make has built-in rules to translate from C and C++ source to object files, to link object
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>de</category><category>in the news</category><guid>http://www.glitzersachen.de/posts/in-the-news/cyberpunk-rising.html</guid><pubDate>Sun, 03 Nov 2013 12:00:00 GMT</pubDate></item><item><title>Better deactivate the Linking Rule %: %.o in Makefiles</title><link>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Make has built-in rules to translate from C and C++ source to object files, to link object
 files to executables, but also a rule to compile from C and C++ source directly into an
 executable:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)&lt;/span&gt;
 &lt;span class="c"&gt;%.o: %.cc: $(CXX) -c $(CPPFLAGS) $(CXXFLAGS)&lt;/span&gt;
 &lt;span class="c"&gt;%:   %.o:  $(CC) $(LDFLAGS) N.o $(LOADLIBES) $(LDLIBS)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -72,7 +75,7 @@ executable:&lt;/p&gt;
 
 &lt;p&gt;(This is what the &lt;em&gt;Gnu Make Manual&lt;/em&gt; documents). In more complex makefiles it's not always
 evident, which path of translation will be chosen. It might be either of&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
 &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -81,11 +84,11 @@ evident, which path of translation will be chosen. It might be either of&lt;/p&g
 compiler to link C++ programs&lt;/a&gt;. There is more than one way to fix this
 problem, but I recommend (for reasons given below) to deactivate the built-in &lt;em&gt;'%: %.o'&lt;/em&gt;
 rule, like this:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%: %.o # deactivate built-in rule&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;%: %.o # deactivate built-in rule&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>techtip</category><category>make</category><category>en</category><guid>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</guid><pubDate>Wed, 04 Sep 2013 12:00:00 GMT</pubDate></item><item><title>Kleines Make-Tutorial nun online</title><link>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</link><description>&lt;div&gt;&lt;p&gt;Das kleine &lt;a href="http://www.glitzersachen.de/articles/kleines-make-tutorial"&gt;Make-Tutorial&lt;/a&gt; aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; ist jetzt &lt;a href="http://www.teachswt.de"&gt;online&lt;/a&gt;.&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>en</category><category>make</category><category>techtip</category><guid>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</guid><pubDate>Wed, 04 Sep 2013 12:00:00 GMT</pubDate></item><item><title>Kleines Make-Tutorial nun online</title><link>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Das kleine &lt;a href="http://www.glitzersachen.de/articles/kleines-make-tutorial"&gt;Make-Tutorial&lt;/a&gt; aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; ist jetzt &lt;a href="http://www.teachswt.de"&gt;online&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
 einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.&lt;/p&gt;
 &lt;p&gt;Das Tutorial ist eine Auskopplung aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; und zwar aus &lt;a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf"&gt;Lösung 4&lt;/a&gt;. Ich hielt es
@@ -101,9 +104,10 @@ verfügbar.&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>news</category><category>announcement</category><category>blog</category><category>tutorial</category><category>howto</category><category>de</category><category>make-tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item><item><title>Diverse Quelltexte jetzt online</title><link>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</link><description>&lt;div&gt;&lt;p&gt;Einige neue Goodies aus meinem Archiv: Die Quelltexte für &lt;a href="http://github.com/m-e-leypold/mcalc"&gt;mcalc&lt;/a&gt;, &lt;a href="http://github.com/m-e-leypold/u-pki"&gt;u-pki&lt;/a&gt; und
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blog</category><category>de</category><category>howto</category><category>make-tutorial</category><category>news</category><category>tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item><item><title>Diverse Quelltexte jetzt online</title><link>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Einige neue Goodies aus meinem Archiv: Die Quelltexte für &lt;a href="http://github.com/m-e-leypold/mcalc"&gt;mcalc&lt;/a&gt;, &lt;a href="http://github.com/m-e-leypold/u-pki"&gt;u-pki&lt;/a&gt; und
 &lt;a href="http://github.com/m-e-leypold/lsd-mount-utilities"&gt;lsd-mount-utilities&lt;/a&gt; sind jetzt (wieder) online.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href="http://github.com/m-e-leypold/mcalc"&gt;MCalc&lt;/a&gt;: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
   natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
   interpretieren kann. Entstanden im Jahr 2005 als Demonstration.&lt;/p&gt;
@@ -116,10 +120,11 @@ verfügbar.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://github.com/m-e-leypold/lsd-mount-utilities"&gt;LSD Mount utilities&lt;/a&gt;: The LSD mount utilities assist in setting up (creating) and
    mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;They also enable users (not only root) to mount encrypted
+&lt;/ul&gt;
+&lt;p&gt;They also enable users (not only root) to mount encrypted
   filesystems if appropriate entries have been added to /etc/fstab.&lt;/p&gt;
 &lt;!-- Local Variables: --&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>news</category><category>de</category><category>mcalc</category><category>u-pki</category><category>lsd-mount-utilities</category><guid>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</guid><pubDate>Thu, 18 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>de</category><category>lsd-mount-utilities</category><category>mcalc</category><category>news</category><category>u-pki</category><guid>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</guid><pubDate>Thu, 18 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>

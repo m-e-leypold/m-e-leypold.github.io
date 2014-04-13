@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (blog)</title><link>http://www.glitzersachen.de</link><description></description><atom:link href="http://www.glitzersachen.de/categories/blog.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 04 Mar 2014 18:12:26 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Better deactivate the Linking Rule %: %.o in Makefiles</title><link>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</link><description>&lt;div&gt;&lt;p&gt;Make has built-in rules to translate from C and C++ source to object files, to link object
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de (blog)</title><link>http://www.glitzersachen.de</link><description></description><language>en</language><lastBuildDate>Sun, 13 Apr 2014 23:16:42 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Better deactivate the Linking Rule %: %.o in Makefiles</title><link>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Make has built-in rules to translate from C and C++ source to object files, to link object
 files to executables, but also a rule to compile from C and C++ source directly into an
 executable:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)&lt;/span&gt;
 &lt;span class="c"&gt;%.o: %.cc: $(CXX) -c $(CPPFLAGS) $(CXXFLAGS)&lt;/span&gt;
 &lt;span class="c"&gt;%:   %.o:  $(CC) $(LDFLAGS) N.o $(LOADLIBES) $(LDLIBS)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -10,7 +10,7 @@ executable:&lt;/p&gt;
 
 &lt;p&gt;(This is what the &lt;em&gt;Gnu Make Manual&lt;/em&gt; documents). In more complex makefiles it's not always
 evident, which path of translation will be chosen. It might be either of&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
 &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -19,11 +19,11 @@ evident, which path of translation will be chosen. It might be either of&lt;/p&g
 compiler to link C++ programs&lt;/a&gt;. There is more than one way to fix this
 problem, but I recommend (for reasons given below) to deactivate the built-in &lt;em&gt;'%: %.o'&lt;/em&gt;
 rule, like this:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%: %.o # deactivate built-in rule&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;%: %.o # deactivate built-in rule&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>techtip</category><category>make</category><category>en</category><guid>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</guid><pubDate>Wed, 04 Sep 2013 12:00:00 GMT</pubDate></item><item><title>Kleines Make-Tutorial nun online</title><link>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</link><description>&lt;div&gt;&lt;p&gt;Das kleine &lt;a href="http://www.glitzersachen.de/articles/kleines-make-tutorial"&gt;Make-Tutorial&lt;/a&gt; aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; ist jetzt &lt;a href="http://www.teachswt.de"&gt;online&lt;/a&gt;.&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>en</category><category>make</category><category>techtip</category><guid>http://www.glitzersachen.de/posts/techtipps/make-deactivate-object-to-exe-rule.html</guid><pubDate>Wed, 04 Sep 2013 12:00:00 GMT</pubDate></item><item><title>Kleines Make-Tutorial nun online</title><link>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Das kleine &lt;a href="http://www.glitzersachen.de/articles/kleines-make-tutorial"&gt;Make-Tutorial&lt;/a&gt; aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; ist jetzt &lt;a href="http://www.teachswt.de"&gt;online&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
 einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.&lt;/p&gt;
 &lt;p&gt;Das Tutorial ist eine Auskopplung aus &lt;a href="http://www.teachswt.de"&gt;TeachSWT&lt;/a&gt; und zwar aus &lt;a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf"&gt;Lösung 4&lt;/a&gt;. Ich hielt es
@@ -39,4 +39,4 @@ verfügbar.&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>news</category><category>announcement</category><category>blog</category><category>tutorial</category><category>howto</category><category>de</category><category>make-tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blog</category><category>de</category><category>howto</category><category>make-tutorial</category><category>news</category><category>tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>
