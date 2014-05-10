@@ -8,8 +8,6 @@
 .. type: text
 -->
 
-# Abstract
-
 *Type tagging* wraps invocation arguments in objects of a different type to select a
 different instance of an overloaded construct and thus a different processing policy for
 the argument. This can be done at no cost at runtime and with a reasonably nice syntax. I'll show use cases and demonstrate a sample implementation.
