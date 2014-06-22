@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de</title><link>http://www.glitzersachen.de</link><description>About things I find glittering at the road side</description><language>en</language><lastBuildDate>Sun, 22 Jun 2014 16:52:56 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>In großer Höhe verschwunden</title><link>http://www.glitzersachen.de/posts/blurb/in-grosser-hoehe-verschwunden.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.heise.de/newsticker/meldung/Weltweit-mehr-als-400-US-Drohnen-abgestuerzt-2236244.html"&gt;Zitat&lt;/a&gt;: "Auch seien mehrere Drohnen der Streitkräfte bei ihren
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de</title><link>http://www.glitzersachen.de</link><description>About things I find glittering at the road side</description><language>en</language><lastBuildDate>Sun, 22 Jun 2014 18:06:14 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Google und Überwachungskameras</title><link>http://www.glitzersachen.de/posts/blurb/googles-kameras.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.heise.de/newsticker/meldung/Google-kauft-Hersteller-von-Ueberwachungskameras-2236207.html"&gt;Heise News zufolge&lt;/a&gt; kaufte Google gerade einen Hersteller für
+Überwachunsgkameras. Mir stand, als ich das las, sofort vor
+Augen, wie Google den Videostream permanent auswerten könnte,
+"um uns mit angepassten Such-Ergebnissen, maßgeschneiderter
+Werbung und Schutz vor Einbrüchen, Bränden und Wasserschäden"
+zu beglücken.&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/blurb/googles-kameras.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>"don't be evil"</category><category>Dropcam</category><category>Google</category><guid>http://www.glitzersachen.de/posts/blurb/googles-kameras.html</guid><pubDate>Sun, 22 Jun 2014 12:00:15 GMT</pubDate></item><item><title>In großer Höhe verschwunden</title><link>http://www.glitzersachen.de/posts/blurb/in-grosser-hoehe-verschwunden.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.heise.de/newsticker/meldung/Weltweit-mehr-als-400-US-Drohnen-abgestuerzt-2236244.html"&gt;Zitat&lt;/a&gt;: "Auch seien mehrere Drohnen der Streitkräfte bei ihren
 Flügen in großer Höhe verschwunden und wurden nie wieder
 gesehen."&lt;/p&gt;
 &lt;p&gt;Ganz sicher, dass sich da nicht kurz zuvor irgendwelche hellen Lichter
@@ -116,27 +122,4 @@ verfügbar.&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blog</category><category>de</category><category>howto</category><category>make-tutorial</category><category>news</category><category>tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item><item><title>Diverse Quelltexte jetzt online</title><link>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Einige neue Goodies aus meinem Archiv: Die Quelltexte für &lt;a href="http://github.com/m-e-leypold/mcalc"&gt;mcalc&lt;/a&gt;, &lt;a href="http://github.com/m-e-leypold/u-pki"&gt;u-pki&lt;/a&gt; und
-&lt;a href="http://github.com/m-e-leypold/lsd-mount-utilities"&gt;lsd-mount-utilities&lt;/a&gt; sind jetzt (wieder) online.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://github.com/m-e-leypold/mcalc"&gt;MCalc&lt;/a&gt;: Ein Rechenprogramm ("taschenrechner"), das Zahlen und Rechenanweisungen in
-  natürlicher Sprache (wie "zwanzig plus siebenhundertzehn minus drei plus tausend")
-  interpretieren kann. Entstanden im Jahr 2005 als Demonstration.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://github.com/m-e-leypold/u-pki"&gt;u-pki&lt;/a&gt;: Ein in sich abgeschlossenes Skript, um eine Public-Key-Infrastruktur auf
-  einfache Weise einzurichten und zu verwalten.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://github.com/m-e-leypold/lsd-mount-utilities"&gt;LSD Mount utilities&lt;/a&gt;: The LSD mount utilities assist in setting up (creating) and
-   mounting of encrypted loopback filesystems in Linux 2.4 and 2.6.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;They also enable users (not only root) to mount encrypted
-  filesystems if appropriate entries have been added to /etc/fstab.&lt;/p&gt;
-&lt;!-- Local Variables: --&gt;
-
-&lt;!-- mode: markdown --&gt;
-
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>de</category><category>lsd-mount-utilities</category><category>mcalc</category><category>news</category><category>u-pki</category><guid>http://www.glitzersachen.de/posts/announcements/announce-diverse-quelltexte.html</guid><pubDate>Thu, 18 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blog</category><category>de</category><category>howto</category><category>make-tutorial</category><category>news</category><category>tutorial</category><guid>http://www.glitzersachen.de/posts/announcements/announce-make-tutorial.html</guid><pubDate>Fri, 19 Jul 2013 12:00:00 GMT</pubDate></item></channel></rss>
