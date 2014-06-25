@@ -72,6 +72,115 @@
     
         <article class="postbox h-entry post-text">
         <h1 class="p-name">
+<a href="posts/in-the-news/cyberpunk-rising.html" class="u-url">Cyberpunk Rising</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-11-03T12:00:00+00:00">2013-11-03 12:00</time>
+        </small>
+</h1>
+        <hr>
+        <div class="p-summary">
+        <div>
+<p>Aus den aktuellen Nachrichten:
+<em> <a href="http://futurezone.at/digital-life/buegeleisen-infizieren-per-wlan-pcs-mit-malware/33.905.164/print">Bügeleisen infizieren per WLAN PCs mit Malware</a> 
+</em> <a href="http://www.heise.de/newsticker/meldung/Super-Malware-BadBIOS-wirft-Fragen-auf-2038240.html?view%3Dprint">Super-Malware "BadBIOS" wirft Fragen auf</a> </p>
+<p>Entweder drehen jetzt alle hohl, oder die <a href="http://en.wikipedia.org/wiki/Cyberpunk">Cyberpunk-Zukunft</a> rollt doch
+schneller auf uns zu, als ich erwartet hätte. Spannend. ;-)</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->
+</div>
+        </div>
+            
+        
+    <p>
+        <a href="posts/in-the-news/cyberpunk-rising.html#disqus_thread" data-disqus-identifier="cache/posts/in-the-news/cyberpunk-rising.html">Comments</a>
+
+
+        </p></article>
+        <article class="postbox h-entry post-text">
+        <h1 class="p-name">
+<a href="posts/techtipps/make-deactivate-object-to-exe-rule.html" class="u-url">Better deactivate the Linking Rule %: %.o in Makefiles</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-09-04T12:00:00+00:00">2013-09-04 12:00</time>
+        </small>
+</h1>
+        <hr>
+        <div class="p-summary">
+        <div>
+<p>Make has built-in rules to translate from C and C++ source to object files, to link object
+files to executables, but also a rule to compile from C and C++ source directly into an
+executable:</p>
+<div class="codehilite"><pre><span class="c">%.o: %.c:  $(CC)  -c $(CPPFLAGS) $(CFLAGS)</span>
+<span class="c">%.o: %.cc: $(CXX) -c $(CPPFLAGS) $(CXXFLAGS)</span>
+<span class="c">%:   %.o:  $(CC) $(LDFLAGS) N.o $(LOADLIBES) $(LDLIBS)</span>
+</pre></div>
+
+
+<p>(This is what the <em>Gnu Make Manual</em> documents). In more complex makefiles it's not always
+evident, which path of translation will be chosen. It might be either of</p>
+<div class="codehilite"><pre><span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span><span class="p">.</span><span class="n">o</span> <span class="o">--&gt;</span> <span class="n">foo</span>
+<span class="n">foo</span><span class="p">.</span><span class="n">cc</span> <span class="o">--&gt;</span> <span class="n">foo</span>
+</pre></div>
+
+
+<p>With C source this is not a problem, but with C++ it is: One <a href="http://www.parashift.com/c++-faq/overview-mixing-langs.html">should not use the C
+compiler to link C++ programs</a>. There is more than one way to fix this
+problem, but I recommend (for reasons given below) to deactivate the built-in <em>'%: %.o'</em>
+rule, like this:</p>
+<div class="codehilite"><pre><span class="c">%: %.o # deactivate built-in rule</span>
+</pre></div>
+
+
+<p class="more"><a href="posts/techtipps/make-deactivate-object-to-exe-rule.html">Read more…</a></p>
+</div>
+        </div>
+            
+        
+    <p>
+        <a href="posts/techtipps/make-deactivate-object-to-exe-rule.html#disqus_thread" data-disqus-identifier="cache/posts/techtipps/make-deactivate-object-to-exe-rule.html">Comments</a>
+
+
+        </p></article>
+        <article class="postbox h-entry post-text">
+        <h1 class="p-name">
+<a href="posts/announcements/announce-make-tutorial.html" class="u-url">Kleines Make-Tutorial nun online</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-07-19T12:00:00+00:00">2013-07-19 12:00</time>
+        </small>
+</h1>
+        <hr>
+        <div class="p-summary">
+        <div>
+<p>Das kleine <a href="articles/kleines-make-tutorial">Make-Tutorial</a> aus <a href="http://www.teachswt.de">TeachSWT</a> ist jetzt <a href="http://www.teachswt.de">online</a>.</p>
+<p>Dieses Tutorial führt in die Erstellung von Makefiles für GNU-Make ein, indem aus
+einfachen Makefiles schrittweise allgemeinere und kompliziertere abgeleitet werden.</p>
+<p>Das Tutorial ist eine Auskopplung aus <a href="http://www.teachswt.de">TeachSWT</a> und zwar aus <a href="http://www.glitzersachen.de/teachswt/loesung-04.vdm.pdf">Lösung 4</a>. Ich hielt es
+Ende 2010 für lohnenswert, den Text als eigenes Dokument weiterzupflegen, und wandelte ihn
+Ende 2010 für ein Blog um, für das geplant war, es Ende 2010 online gehen zu lassen.  Die
+Umsetzung des Blogs wurde dann aus verschiedenen Gründen erst mal auf Eis gelegt.</p>
+<p>Aber jetzt gibt es wieder ein neues Blog und mit ihm das kleine <a href="articles/kleines-make-tutorial">Make-Tutorial</a>, jetzt als
+Hypertext. Viel Spaß.</p>
+<p>Update 2014-03-03: Das Tutorial ist im Laufe der <a href="announcements/now-on-nikola.html">Nikola Migration</a>
+erst einmal unter den Tisch gefallen, also augenblicklich nicht mehr
+verfügbar.</p>
+<!-- Local Variables: -->
+
+<!-- mode: markdown -->
+
+<!-- End: -->
+</div>
+        </div>
+            
+        
+    <p>
+        <a href="posts/announcements/announce-make-tutorial.html#disqus_thread" data-disqus-identifier="cache/posts/announcements/announce-make-tutorial.html">Comments</a>
+
+
+        </p></article>
+        <article class="postbox h-entry post-text">
+        <h1 class="p-name">
 <a href="posts/announcements/announce-diverse-quelltexte.html" class="u-url">Diverse Quelltexte jetzt online</a>
         <small>  
              Posted: <time class="published dt-published" datetime="2013-07-18T12:00:00+00:00">2013-07-18 12:00</time>
