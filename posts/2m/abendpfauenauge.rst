@@ -21,7 +21,7 @@
 Dieses wunderschöne Abendpfauenauge_ habe ich möglicherweise den
 Brüdern_ zu verdanken.
 
-Der Graue betritt nämlich das Wohnzimmer durch die Katzentür uns sieht
+Der Graue betritt nämlich das Wohnzimmer durch die Katzentür und sieht
 sich sofort hektisch um, als ob er etwas verloren hätte. Da ich weiß,
 dass schon ab und an Mäuse zum Spielen mit nach Hause genommen wurden
 - die beiden Tröpfe sehen Mäuse nämlich hauptsächlich als Spielzeug
