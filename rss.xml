@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Glitzersachen.de</title><link>http://www.glitzersachen.de</link><description>About things I find glittering at the road side</description><language>en</language><lastBuildDate>Wed, 25 Jun 2014 04:06:17 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Abendpfauenauge</title><link>http://www.glitzersachen.de/posts/2m/abendpfauenauge.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;div class="figure align-right"&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Glitzersachen.de</title><link>http://www.glitzersachen.de</link><description>About things I find glittering at the road side</description><language>en</language><lastBuildDate>Sun, 06 Jul 2014 17:15:50 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pfirsich-Tee (mal etwas anders)</title><link>http://www.glitzersachen.de/posts/cooking/pfirsich-tee.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Die handelsüblichen "ice teas" mag ich gar nicht, die sind
+pappsüß. Schlecht für alles mögliche (mit den Zähnen mal angefangen),
+und Glukose/Fructose-Sirup hat sowieso den Ruf eher mehr Durst zu
+machen als zu löschen.&lt;/p&gt;
+&lt;p&gt;Natürlich kann man einfach Pfirsichsaft aus der Tüte in abgekühlten
+Grüntee geben. Das ist schon ziemlich lecker -- aber ich habe etwas
+gefunden was noch leckerer ist.&lt;/p&gt;
+&lt;p&gt;Man nehme (für etwa einen Liter):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Zwei bis drei gut reife Pfirsiche (sie müssen weich sein)&lt;/li&gt;
+&lt;li&gt;Optional eine halbe bis eine ganze nicht zu reife (mehlige) Birne&lt;/li&gt;
+&lt;li&gt;Grüntee oder weißen Tee (4 Teelöffel)&lt;/li&gt;
+&lt;li&gt;Teesieb oder Teefilter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Die Früchte in dünne Scheiben oder kleine Stücke schneiden, in die
+Kanne geben. Den Tee in das Teesieb. Die Früchte mit kochendem Wasser
+aufgießen, dann das Teesieb in die Kanne geben. Nach 3-5 Minuten das
+Teesieb entfernen. Eine halbe Stunde stehen lassen.&lt;/p&gt;
+&lt;p&gt;Das Wasser kühlt bereits durch den Kontakt mit den Früchten
+ausreichend ab, deshalb soll das Wasser kochend dazugegeben werden,
+nicht etwa auf 80 Grad abgekühlt, wie sonst für grüne oder weiße Tees
+üblich.&lt;/p&gt;
+&lt;p&gt;Man kann den Tee auch höher konzentrieren, allerdings sollte es sich
+dann wirklich um einen guten chinesischen, weißen Tee handeln. Ich
+rate, billige Grüntees sowieso zu meiden, da das Getränk sonst zu herb
+wird.&lt;/p&gt;
+&lt;p&gt;Dieser Pfirsichtee kann warm getrunken werden oder man kann ihn
+abkühlen lassen und dann Eiswürfel dazugeben. Die im Aufguss
+befindlichen Früchte kann man mit in die Tasse geben und dann
+herauslöffeln (das ist ein bisschen wie Früchtebowle, aber ohne
+Alkohol).&lt;/p&gt;
+&lt;!-- Local Variables: --&gt;
+
+&lt;!-- mode: markdown --&gt;
+
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>pfirsich</category><category>rezepte</category><category>tee</category><guid>http://www.glitzersachen.de/posts/cooking/pfirsich-tee.html</guid><pubDate>Sun, 06 Jul 2014 15:00:00 GMT</pubDate></item><item><title>Abendpfauenauge</title><link>http://www.glitzersachen.de/posts/2m/abendpfauenauge.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;div class="figure align-right"&gt;
 &lt;a class="reference external image-reference" href="http://www.glitzersachen.de/galleries/snapshots/01-abendpfauenauge-1.png"&gt;&lt;img alt="/galleries/snapshots/01-abendpfauenauge-1.thumbnail.png" src="http://www.glitzersachen.de/galleries/snapshots/01-abendpfauenauge-1.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p class="caption"&gt;&lt;a class="reference external" href="http://de.wikipedia.org/wiki/Abendpfauenauge"&gt;Abendpfauenauge&lt;/a&gt; 1&lt;/p&gt;
 &lt;/div&gt;
@@ -105,14 +140,4 @@ will turn out to last a bit longer.&lt;/p&gt;
 
 &lt;!-- mode: markdown --&gt;
 
-&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blogofile</category><category>glitzersachen.de</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</guid><pubDate>Sun, 02 Feb 2014 12:00:00 GMT</pubDate></item><item><title>Leider nicht selten dämlich</title><link>http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html</link><dc:creator>M E Leypold</dc:creator><description>&lt;div&gt;&lt;p&gt;Der &lt;a href="http://www.nzz.ch/aktuell/schweiz/schengen-daten-in-daenemark-gestohlen-1.18210733"&gt;Neuen Züricher Zeitung zufolge&lt;/a&gt; wurden aus dem Schengener
-Informationssystem Daten "gestohlen" (über die Anwendbarkeit des Wortes gestohlen kann man
-sich schon streiten: Unrechtmäßig kopiert ist ja nicht entwendet, letzteres impliziert ja
-ein Verschwinden am ursprünglichen Ort und mir scheint "gestohlen" dem "entwendet" doch
-näher zu sein - aber darum geht es hier nicht).&lt;/p&gt;
-&lt;p&gt;Fedpol (die ermittelnde Behörde) dazu so: (Zitat) &lt;em&gt;Ausserdem seien die Angaben codiert und
-könnten somit nicht ohne weiteres verwendet werden. Bei der Codierung handelt es sich
-jedoch lediglich um einen Zahlencode für die jeweils angeordnete polizeiliche Massnahme,
-nicht aber um eine eigentliche Verschlüsselung&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Das ist ja wirklich ein riesige Hürde ...&lt;br&gt;
-&lt;/p&gt;&lt;p class="more"&gt;&lt;a href="http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html"&gt;Read more…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>de</category><category>politics</category><guid>http://www.glitzersachen.de/posts/opinion/sind-ja-codiert.html</guid><pubDate>Fri, 27 Dec 2013 12:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- End: --&gt;&lt;/div&gt;</description><category>announcement</category><category>blogofile</category><category>glitzersachen.de</category><category>nikola</category><category>static blog generators</category><guid>http://www.glitzersachen.de/posts/announcements/now-on-blogofile.html</guid><pubDate>Sun, 02 Feb 2014 12:00:00 GMT</pubDate></item></channel></rss>
