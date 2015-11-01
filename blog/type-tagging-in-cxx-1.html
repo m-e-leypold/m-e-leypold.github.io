@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+
+  <link rel="stylesheet" href="../static/w3.css"/>
+  <link rel="stylesheet" href="../static/w3-theme-indigo.css"/>
+  <link rel="stylesheet" href="../static/gs-custom.css"/>
+  
+  
+  </head>  
+  <body>
+
+
+<div id="header" class="w3-container w3-theme w3-card-2">
+  <div class="w3-half">
+    <h1 class="title"><a href="../index.html">Glitzersachen</a></h1>
+  </div>
+  <div class="w3-half"><h2>The Amazing Markus and his Educated Bytes</h2></div>    
+</div>
+
+<article class="w3-container w3-text-theme">
+<h3 id="c-type-tagging-1">C++ Type Tagging (1)</h3>
+<p><em>Type tagging</em> (ˈtagiŋ) - the method of wrapping a reference into a shallow wrapper of different type to select a different instance of an overloaded construct.</p>
+<h4 id="introduction">Introduction</h4>
+<p>Here is an example: Assume you want to construct an object of class <em>SomeThing</em> from a vector of <em>Foo</em>. A rather typical approach would be:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">vector&lt;Foo&gt; v;
+... build vector v;
+SomeThing s(v);</code></pre></td></tr></table>
+<p>In the general, safe, case, <em>SomeThing</em> would just copy data from <em>v</em> to build up its inner initial state. This follows the principle of least surprise: We do not generally expect that constructors mutate their arguments.</p>
+<p>This might not be as efficient as desired - copying might be expensive. If, in example, <em>SomeThing</em> is in itself using a <em>vector<Foo></em> to store its internal state the possibility opens up, to use <em>std::swap</em> to take over the content of <em>v</em> by <strong>moving</strong> it into the object, instead of <strong>copying</strong>. <em>v</em> would be changed by this operation, so this is only possible if the content of <em>v</em> is not needed any more after object construction, i.e. if <em>v</em> was only a helper object. In practice this case occurs frequently for objects with non trivial inner structure. But it cannot be the only mode of construction. It depends on the client code that directs the construction of <em>SomeThing</em> if it wants to continue using <em>v</em>. One might as well want to construct a series of related objects, reusing the content of <em>v</em>:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">... build vector v;
+SomeThing s1(v);
+... modify vector v;
+SomeThing s2(v);</code></pre></td></tr></table>
+<p>Generally I cannot (and should not want) to restrict the user of my class to only one mode of construction (copying vs. moving). Rather one wants to support both modes with sensible defaults following the principle of least surprise.</p>
+<p><em>Type tagging</em> will allow to do that by marking the argument in the following way:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">vector&lt;Foo&gt; v;
+... build vector v;
+SomeThing s( disposable(v) );</code></pre></td></tr></table>
+<p>This will tell the constructor that it can move the content of <em>v</em> (if it supports this), whereas</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">vector&lt;Foo&gt; v;
+... build vector v;
+SomeThing s( v );</code></pre></td></tr></table>
+<p>still copies the content of <em>v</em> (which is the safe default). It is also desirable that, if <em>SomeThing</em> doesn't know about about type tagging conventions, that the &quot;normal&quot;, safe, copying constructor is used instead. This is indeed possible as we will see.</p>
+<p>The following article presents a sample implementation of type tagging (that is, the &quot;operator&quot; <em>disposable</em>) and explains how it works. Alternatives to the <em>type tagging</em> approach will be discussed at some other time.</p>
+<p>At this point you might already suspect a relationship to <em>C++ 11</em> rvalue references and <em>std::move</em> . You're not wrong: One might think about <em>rvalue references</em> as compiler supplied (that is: automatic) type tagging. I'll elaborate on this in a follow up article. But the idea I'm going to present here will work even with <em>C++ 98</em> which does no have rvalue references and can be extended to other areas of application (beyond selecting copying/moving constructors).</p>
+<h4 id="implementation">Implementation</h4>
+<h5 id="goals">Goals</h5>
+<p>To summarize: If we write</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">SomeThing s( v );</code></pre></td></tr></table>
+<p>we want one thing to happen (namely <em>v</em> being copied and not modified), whereas if we write</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">SomeThing s( disposable(v) );</code></pre></td></tr></table>
+<p>we want another thing to happen (namely the content of <em>v</em> being reused for the sake of efficiency, accepting that <em>v</em> is being modified in the process).</p>
+<p>This can be effected, of course, by implementing two different versions of the constructor <em>SomeThing</em> which take different Types:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">SomeThing(<span class="dt">const</span> Multiples&amp; m) { ... }</code></pre></td></tr></table>
+<p>and</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">SomeThing(DisposableRef&lt;Multiples&gt; dm) { ... }</code></pre></td></tr></table>
+<p>(For my implementation example I assume that the parameter passed to the constructor is an object of class <em>Multiples</em>. You'll find the complete implementation in the [listing]).</p>
+<p>The job of <em>disposable()</em> is just to wrap a class of type <em>DisposableRef<Multiples></em> around a <em>Multiples&amp;</em> to provide the type that will make the compiler select the alternate constructor.</p>
+<h5 id="the-wrapper-class">The Wrapper Class</h5>
+<p>The wrapper class <em>DisposableRef<Multiples></em> is easily defined as a template:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp"><span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> DisposableRef { 
+<span class="kw">public</span>:
+  <span class="kw">inline</span> DisposableRef(T&amp; inner) : inner(inner){ };
+  <span class="kw">inline</span> T&amp; ref()        { <span class="kw">return</span> inner ; }
+<span class="kw">private</span>:
+  T&amp; inner;
+};</code></pre></td></tr></table>
+<p>The constructor simply stores the reference, the method <em>DisposableRef::ref()</em> is required to retrieve the reference again (e.g. in the alternate constructor).</p>
+<p><em>Disposable</em> can be implemented as:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp"><span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt;
+<span class="kw">inline</span> DisposableRef&lt;T&gt; disposable(T&amp; inner){ 
+  <span class="kw">return</span> DisposableRef&lt;T&gt;(inner);
+}</code></pre></td></tr></table>
+<p><em>Disposable</em> is only a wrapper function to avoid having to specify the type of the argument all the time. The expression <em>DisposableRef(m)</em> does not work: One would have to write <em>DisposableRef<Multiples>(m)</em> which would be too cumbersome. A template function on the other side can be invoked without a type argument to the template, like <em>disposable(m)</em>.</p>
+<p>Note now</p>
+<ul>
+<li>that <em>DisposableRef</em> has the reference as only member,</li>
+<li>that all the methods are non virtual, and can therefore be inlined,</li>
+<li>that they only pass the reference into the object or return the reference from the single member.</li>
+</ul>
+<p>This means, there is hope that, with a reasonable compiler, this will compile to the same code as if the raw pointer is being passed around.</p>
+<p><em>DisposableRef</em> Construction and <em>disposable()</em> ideally could be removed at compile time, that is: compile to <em>no-ops</em>, since they take an address and return the very same address. Ideally they would only supply type information that is used at run time to select a different operation, but the address passed around and the way it is passed around, should always be the same.</p>
+<p>After all, the type is something that exists only in the compiler and the binary representation of <em>T&amp;</em> and <em>Disposable&lt;T&gt;</em> is probably the same.</p>
+<p>This has not been demonstrated so far in this article and there is no guarantee in the standard, but it can be strongly expected. A full demonstration, though, will have to be subject of another follow up article.</p>
+<h5 id="testing">Testing</h5>
+<p>Let's test drive my implementation, First we fill in the implementation of <em>SomeThing</em>:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp"><span class="kw">class</span> SomeThing {
+<span class="kw">public</span>:
+  SomeThing(<span class="dt">const</span> Multiples&amp; m) {
+    cout &lt;&lt; <span class="st">&quot;Something: Received NON-disposable argument - need to copy&quot;</span> &lt;&lt; endl;
+    <span class="kw">this</span>-&gt;m =  m;
+  }
+  SomeThing(DisposableRef&lt;Multiples&gt; dm) {
+    cout &lt;&lt; <span class="st">&quot;Something: Received disposable argument - can swap/move.&quot;</span> &lt;&lt; endl;
+    swap(<span class="kw">this</span>-&gt;m, dm.ref());
+  }
+<span class="kw">private</span>:
+  Multiples m;
+};</code></pre></td></tr></table>
+<p>Now, if we execute the following statements (assuming an output operator has been defined for <em>Multiples</em>)</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">Multiples m(<span class="dv">3</span>,<span class="dv">7</span>);
+cout &lt;&lt; m;
+
+SomeThing st2( m );                <span class="co">// 1st call</span>
+cout &lt;&lt; m;
+
+SomeThing st1( disposable(m) );    <span class="co">// 2nd call</span>
+cout &lt;&lt; m;</code></pre></td></tr></table>
+<p>then we get the following:</p>
+<pre class="tty numberLines"><code>Multiples @ 0xbf93b39c counting 3:
+ 7 14 21.
+Something: Received NON-disposable argument - need to copy
+Multiples @ 0xbf93b39c counting 3:
+ 7 14 21.
+Something: Received disposable argument - can swap/move.
+Multiples @ 0xbf93b39c counting 0:
+.</code></pre>
+<p>This is exactly as desired: The first call selects the first constructor which copies the data from the argument, leaving the argument unmodified. The second call selects the second constructor which swaps the internal state of the argument into the object instead.</p>
+<h5 id="more-motivation">More Motivation</h5>
+<p>There is one aspect noteworthy in the method demonstrated so far: The decision if the argument can be destroyed, is left to the caller (instead of the designer of the class <em>SomeThing</em>). This is as it should be: The class designer cannot decide which method (<em>swap</em> or <em>copy</em>) is best for building the internal class state. Only providing a &quot;copying&quot; constructor would close the door on any optimization in this regard. Only providing a &quot;swapping&quot; constructor would lead to undue surprises when invoked as <em>SomeThing(m)</em>.</p>
+<p>The effect I'm achieving so far with the demonstrated implementation is</p>
+<ul>
+<li>invoking the copying constructor by default and</li>
+<li>invoking the swapping constructor only if this is marked so at the place of invocation,</li>
+</ul>
+<p>This is exactly the right way to go.</p>
+<p>There is one issue left, though: Exactly because the user of <em>SomeThing</em> rather than the designer is providing the policy information implicit in the markup with <em>disposable()</em>, he would have to check for every class, if it provides a swapping constructor. Imagine a class <em>SomeThingElse</em> which does only provide the copying constructor as given above.</p>
+<p><em>SomeThingElse se1( disposable(m) )</em> would end in an error message by the compiler:</p>
+<pre class="tty"><code>example1_type-tagging.cc:85: error: no matching function for call \
+                             to ‘SomeThingElse::SomeThingElse(DisposableRef&lt;Multiples&gt;)’
+example1_type-tagging.cc:62: note: candidates are: SomeThingElse::SomeThingElse(const Multiples&amp;)
+example1_type-tagging.cc:60: note: SomeThingElse::SomeThingElse(const SomeThingElse&amp;)</code></pre>
+<p>But in the end it would be very much desirable to be able to use <em>disposable()</em> even in cases where there is no swapping constructor, and profit from a swapping constructor if one is introduced in a later version of <em>SomeThingElse</em>.</p>
+<p>Fortunately this feature is easily added to <em>DisposableRef</em> as demonstrated in the next section, so a user of a class can always write <em>SomeThingElse se1( disposable(m) )</em> without having to know if a swapping constructor exists. This way he can use <em>disposable()</em> just to mark up, that he is not interested in the content of the argument <em>m</em> any more and that construction <em>might</em> be optimized by swapping out state from <em>m</em>.</p>
+<p>The question if this is <em>actually</em> done is now removed from implementing the data flow. It can instead become a part of later optimization process or part of the dialog between the class designer and somebody (maybe even some third party) identifying performance bottle necks and optimizing the application. The data processing logic, at that later point is not affected and the code at the point of invocation needs not to be changed.</p>
+<p>Maybe even more important: The call to <em>disposable()</em> could then be generated by a template without regard to the constructors provided by some template class argument.</p>
+<h5 id="fallbacks">Fallbacks</h5>
+<p>The desired fallback can be implemented by adding a conversion operator from <code>DisposableRef&lt;T&gt;</code> to <code>T&amp;</code> to <code>DisposableRef&lt;T&gt;</code>:</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp"><span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> DisposableRef { 
+<span class="kw">public</span>:
+  <span class="kw">inline</span> <span class="kw">operator</span> T&amp;() { <span class="kw">return</span> inner ; }
+  ...
+};</code></pre></td></tr></table>
+<p>Now in the following code fragment</p>
+<table class="sourceCode cpp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="sourceCode"><pre><code class="sourceCode cpp">Multiples m2(<span class="dv">5</span>,<span class="dv">5</span>);
+cout &lt;&lt; m2;
+
+SomeThingElse se2( m2 );              <span class="co">// Call 1</span>
+SomeThingElse se1( disposable(m2) );  <span class="co">// Call 2</span>
+
+cout &lt;&lt; m2;</code></pre></td></tr></table>
+<p><em>Call 2</em> will compile, but will select the same (and only) constructor as <em>call 1</em>:</p>
+<pre class="tty"><code>Multiples @ 0xbfca62f8 counting 5:
+ 5 10 15 20 25.
+SomethingElse: Treating as NON-disposable argument - need to copy
+SomethingElse: Treating as NON-disposable argument - need to copy
+Multiples @ 0xbfca62f8 counting 5:
+ 5 10 15 20 25.</code></pre>
+<p>You can see: The argument <em>m2</em> will not be modified.</p>
+<p>Note, that constructor selection for <em>SomeThing</em> still works as demonstrated above. This is because, when resolving the constructor overloading, the compiler will</p>
+<ul>
+<li>first look for a constructor with exactly the type signature of the arguments at the invocation,</li>
+<li>and only then look for suitable conversions which would allow an alternative constructor to be invoked.</li>
+</ul>
+<p>Since it finds <em>SomeThing(DisposableRef&lt;Multiples&gt; dm)</em> first, the possibility of conversion will never be considered,</p>
+<h4 id="coda">Coda</h4>
+<p>What I've demonstrated so far is a — in my opinion rather nice — syntax, to direct the system to handle an argument to a constructor in a way different from the default. But I've intentionally omitted to delve into some points:</p>
+<ul>
+<li><p>What are the alternatives to using type tagging as demonstrated? What about using a flag as a parameter? What about using a special builder syntax instead of passing a complex data structure? What about using <em>const</em> to control copying vs. swapping? What about <em>std::copy</em>?</p></li>
+<li><p>I've only asserted that I consider it rather probable that type tagging comes without extra runtime cost. This still needs to be demonstrated.</p></li>
+<li><p><em>std::move</em> looks rather related to type tagging. Indeed it is the <em>same idea -- rvalue references</em> are compiler supplied type tagging <em>(if you, like me, insist to understand rvalue references</em> based on <em>the type tagging idea) and </em>std:move* like <em>disposable</em> just *converts the type at compile time.</p></li>
+<li><p>Type tagging can be used for more than selecting different constructors.</p></li>
+</ul>
+<p>All these points will be subject of further articles in this mini series.</p>
+<!--
+
+## Resources
+
+- Demo implementation: [listings/ type-tagging-in-cxx/ example1_type-tagging.cc][listing]
+
+[listing]: /listings/type-tagging-in-cxx/example1_type-tagging.cc.html
+
+-->
+
+
+<div class="update-history">
+<h3>Update history</h3>
+<ul>
+<li>2014-05-09: Original Publication</li>
+<li>2015-10-25: Some corrections, removed links to source and listing (necessiated by change of blogging system)</li>
+</ul>
+</div>
+</article>
+
+<div class="w3-container w3-theme-l5 gs-footer">
+  <div class="w3-right w3-small">
+    <a href="../static/about.html#impressum">Imprint/Impressum</a>
+  </div>
+</div>
+</body>
+</html>

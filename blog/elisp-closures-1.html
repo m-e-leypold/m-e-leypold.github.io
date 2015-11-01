@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+
+  <link rel="stylesheet" href="../static/w3.css"/>
+  <link rel="stylesheet" href="../static/w3-theme-indigo.css"/>
+  <link rel="stylesheet" href="../static/gs-custom.css"/>
+  
+  
+  </head>  
+  <body>
+
+
+<div id="header" class="w3-container w3-theme w3-card-2">
+  <div class="w3-half">
+    <h1 class="title"><a href="../index.html">Glitzersachen</a></h1>
+  </div>
+  <div class="w3-half"><h2>The Amazing Markus and his Educated Bytes</h2></div>    
+</div>
+
+<article class="w3-container w3-text-theme">
+<h3 id="emacs-lisp---meditations-on-closures-1">Emacs Lisp - Meditations on Closures 1</h3>
+<h4 id="emacs-lisp-doesnt-have-closures">Emacs Lisp doesn't have closures</h4>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> make-adder </span>(increment)
+  (<span class="kw">lambda</span> (x)
+    (<span class="kw">+</span> x increment)))
+<span class="kw">=&gt;</span> make-adder</code></pre></td></tr></table>
+<p>This is how one would do it in a language that had lexical bindings.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(fset &#39;a (make-adder <span class="dv">10</span>))
+<span class="kw">=&gt;</span> (<span class="kw">lambda</span> (x) (<span class="kw">+</span> x increment))</code></pre></td></tr></table>
+<p><em>make-adder</em> returns a lambda expression, not a compiled closure. This is already some giveaway for what we'll observe next.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(a <span class="dv">100</span>)
+<span class="kw">=&gt;</span> error: (void-variable increment)
+(<span class="kw">setq</span> increment <span class="dv">7</span>)
+<span class="kw">=&gt;</span> <span class="dv">7</span>
+(a <span class="dv">100</span>)
+<span class="kw">=&gt;</span> <span class="dv">107</span></code></pre></td></tr></table>
+<p>The demonstrated approach does not work as desired. This is no way to produce multiple adders that add different increments when called.</p>
+<p><em>Exegesis</em>: This is not a surprise. The <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Dynamic-Binding.html">Emacs Lips Reference Manual, Chapter 11.9.1, Dynamic Binding</a> states clearly that the for free variables of a lambda expression is to be bound dynamically. This has been known for (well) decades. Less well known is the fact that Emacs Lisp introduces optional lexical bindings with version 24 (<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html">Emacs Lips Reference Manual, Chapter 11.9.3, Lexical Binding</a>).</p>
+<p>I'm intenionally ignoring <em>lecical-let</em> (and <em>cl.el</em>) for the moment -- for the sake of (1) understanding &quot;old&quot; emacs lisp better and (b) I cannot currently rely on having a sufficiently modern emacs available in every system I or my users need to work with.</p>
+<h4 id="making-symbols">Making Symbols</h4>
+<p>One approach would be to create new names for every variable one wants to capture and build lambda expressions with quasiquoting and these variable names. Since they differ, every adder would have it's own variable in which to keep its <em>increment</em>.</p>
+<p><em>make-symbol</em> seems like a probable candidate for that job (but actually is something much better).</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">make-symbol</span> <span class="st">&quot;foo&quot;</span>)
+<span class="kw">=&gt;</span> foo</code></pre></td></tr></table>
+<p>Unfortunately make-symbol does not work as a non lisper would naively expect: It doesn't generate new identifiers, but just returns a thing that looks exactly like the symbol whose identifier is made from the string it get's as parameter. Yes, we could use that to create new names witrh a counter, but patience is indicated: What we have here is even better ...</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">set</span> &#39;foo <span class="dv">15</span>)
+<span class="kw">=&gt;</span> <span class="dv">15</span>
+foo
+<span class="kw">=&gt;</span> <span class="dv">15</span></code></pre></td></tr></table>
+<p>Just setting <em>foo</em> to 15. Note the quote. Now we try to <em>set</em> the thing returned by <em>make-symbol</em>.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">set</span> (<span class="kw">make-symbol</span> <span class="st">&quot;foo&quot;</span>) <span class="dv">20</span>)
+<span class="kw">=&gt;</span> <span class="dv">20</span></code></pre></td></tr></table>
+<p>This works.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">foo
+<span class="kw">=&gt;</span> <span class="dv">15</span></code></pre></td></tr></table>
+<p>But this comes as a surprise. <em>(make-symbol &quot;foo&quot;)</em> is a symbol that can be set, but it is not looking up the symbol <em>foo</em> we have in our interaction environment and returns that. Instead it creates something new, that is also called <em>foo</em>. Let's check that hypothesis and capture the result of <em>make-symbol</em> in a variable.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">setq</span> bar (<span class="kw">make-symbol</span> <span class="st">&quot;foo&quot;</span>))
+<span class="kw">=&gt;</span> foo
+bar
+<span class="kw">=&gt;</span> foo</code></pre></td></tr></table>
+<p>So <em>bar</em> now contains a thingy called <em>foo</em>. Just to drive home the point that we have now in <em>bar</em> a thing called <em>foo</em> but different from the thing we normally know as <em>foo</em>:</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">&#39;foo
+<span class="kw">=&gt;</span> foo
+bar
+<span class="kw">=&gt;</span> foo
+(<span class="kw">eq</span> &#39;foo &#39;foo)
+<span class="kw">t</span>
+(<span class="kw">eq</span> &#39;foo bar)
+<span class="kw">nil</span>
+(<span class="kw">eq</span> bar bar)
+<span class="kw">t</span></code></pre></td></tr></table>
+<p>Actually this should not come as a surprise, since this is exactly what <em>let</em> and <em>lambda</em> do when introducing local variables.</p>
+<p>So now we have captured something in <em>bar</em>, that is a variable (aka symbol) with the name <em>foo</em>. We should be able to <em>set</em> that.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">set</span> bar <span class="dv">30</span>)
+<span class="kw">=&gt;</span> <span class="dv">30</span></code></pre></td></tr></table>
+<p>Note the absence of a quote in front of <em>bar</em>.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">bar
+<span class="kw">=&gt;</span> foo
+foo
+<span class="kw">=&gt;</span> <span class="dv">15</span></code></pre></td></tr></table>
+<p>As above the &quot;real&quot; <em>foo</em> still has the old value. How do we get at tho value of the <em>foo</em> in <em>bar</em>?</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">symbol-value</span> bar)
+<span class="dv">30</span></code></pre></td></tr></table>
+<p>There is a function for that (not a surprise).</p>
+<p><em>Exegesis</em>: Take home message is, that <em>make-symbol</em> does not generate a name. It generates a variable -- a memory cell that can hold a value and has a name, a name that is equal to the string passed as argument.</p>
+<p>The documentation for <em>make-symbol</em> says, that <em>(make-symbol NAME)</em> will &quot;return a newly allocated uninterned symbol whose name is NAME&quot;. The keyword here is <em>uninterned</em>. That is Lisp parlance for &quot;not looked up and resolved from the symbol table&quot; (the environment in which the compilation of expression takes place).</p>
+<h4 id="generalizing-from-the-special-case">Generalizing from the Special Case</h4>
+<p>We now have everything in place we need: <em>make-symbol</em> and quasiquoting (which I've just been assuming you already know about), and a superficial understanding how emacs lisp handles lambda expressions.</p>
+<p>I'll now generalize from the special case to to general case (a method I've occasionally found useful, especially when having to deal with quoting).</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> make-adder-1 </span>()
+  (<span class="kw">lambda</span> (x)
+    (<span class="kw">+</span> x <span class="dv">1</span>)))
+    
+<span class="kw">=&gt;</span> make-adder<span class="dv">-1</span></code></pre></td></tr></table>
+<p>This creates an adder, that just adds 1.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(fset &#39;a1 (make-adder<span class="dv">-1</span>))
+<span class="kw">=&gt;</span> (<span class="kw">lambda</span> (x) (<span class="kw">+</span> x <span class="dv">1</span>))</code></pre></td></tr></table>
+<p>We can bind that to a symbol with fset.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(a1 <span class="dv">4</span>)
+<span class="kw">=&gt;</span> <span class="dv">5</span></code></pre></td></tr></table>
+<p>And it adds 1.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> make-adder-2 </span>()
+  `(<span class="kw">lambda</span> (x)
+     (<span class="kw">+</span> x ,<span class="dv">2</span>)))
+<span class="kw">=&gt;</span> make-adder<span class="dv">-2</span></code></pre></td></tr></table>
+<p>This is very similar, but with the twist, that we quasiquote the lambda and have the 2 within an unquote. That doesn't make much of a difference here, since 2 evaluated is 2 again.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(fset &#39;a3 (make-adder<span class="dv">-2</span>))
+<span class="kw">=&gt;</span> (<span class="kw">lambda</span> (x) (<span class="kw">+</span> x <span class="dv">2</span>))
+(a3 <span class="dv">4</span>)
+<span class="kw">=&gt;</span> <span class="dv">6</span></code></pre></td></tr></table>
+<p>This works as expected.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> make-adder-3 </span>()
+  (<span class="kw">let</span> ((sym (<span class="kw">make-symbol</span> <span class="st">&quot;loc&quot;</span>)))
+    (<span class="kw">set</span> sym <span class="dv">3</span>)
+    `(<span class="kw">lambda</span> (x)
+       (<span class="kw">+</span> x ,sym))))
+<span class="kw">=&gt;</span> make-adder<span class="dv">-3</span></code></pre></td></tr></table>
+<p>Now, instead of the constant we add a variable which we produce with <em>make-symbol</em>. and which we set to 3 in <em>make-adder</em>. Note that the lambda expression contains a symbol (a variable reference) that has content 3. It does not contain <em>'sym</em>, but rather the value of <em>'sym</em> which happens to be a variable reference.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(fset &#39;a4 (make-adder<span class="dv">-3</span>))
+<span class="kw">=&gt;</span> (<span class="kw">lambda</span> (x) (<span class="kw">+</span> x loc))</code></pre></td></tr></table>
+<p>Notice, that the symbol is called <em>loc</em>, not <em>sym</em>!</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(a4 <span class="dv">5</span>)
+<span class="kw">=&gt;</span> <span class="dv">8</span></code></pre></td></tr></table>
+<p>This, too, works as expected. Now, <em>loc</em>, we should say every <em>loc</em> has the same value, namely 3, in all adders we can produce with <em>make-adder-3</em>. This is easily remedied now:</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> make-adder </span>(increment)
+  (<span class="kw">let</span> ((sym (<span class="kw">make-symbol</span> <span class="st">&quot;loc&quot;</span>)))
+    (<span class="kw">set</span> sym increment)
+    `(<span class="kw">lambda</span> (x)
+       (<span class="kw">+</span> x ,sym))))
+make-adder</code></pre></td></tr></table>
+<p>We pass a parameter <em>increment</em> to <em>make-adder</em> and set the new variable to the value of increment.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(fset &#39;a5 (make-adder <span class="dv">10</span>))
+<span class="kw">=&gt;</span> (<span class="kw">lambda</span> (x) (<span class="kw">+</span> x loc))</code></pre></td></tr></table>
+<p>So wa can have an adder of 10.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(a5 <span class="dv">7</span>)
+<span class="kw">=&gt;</span> <span class="dv">17</span></code></pre></td></tr></table>
+<p>That works.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(fset &#39;a6 (make-adder <span class="dv">100</span>))
+<span class="kw">=&gt;</span> (<span class="kw">lambda</span> (x) (<span class="kw">+</span> x loc))</code></pre></td></tr></table>
+<p>And we can have an adder of 100.</p>
+<table class="sourceCode commonlisp numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+</pre></td><td class="sourceCode"><pre><code class="sourceCode commonlisp">(a6 <span class="dv">9</span>)
+<span class="kw">=&gt;</span> <span class="dv">109</span>
+
+(a6 <span class="dv">12</span>)
+<span class="kw">=&gt;</span> <span class="dv">112</span></code></pre></td></tr></table>
+<p>And both adders work independently.</p>
+<h4 id="exegesis">Exegesis</h4>
+<p>(Old) emacs lisp might not have closures or lexical bindings, but it allows to create storage cells explicitely and thus emulate the basic function of closures.</p>
+<p>The rules are simple:</p>
+<ul>
+<li><p>Use <em>make-symbol</em> to create a new storage cell for every value you need to capture or want to keep as local state in the closure.</p></li>
+<li><p>Use quasiquoting and unquoting to insert these storage cells in the lambda expression you create.</p></li>
+</ul>
+<p>This might get more complicated if you want to create a function that creates creators of closures (a double level of backquotes).</p>
+</article>
+
+<div class="w3-container w3-theme-l5 gs-footer">
+  <div class="w3-right w3-small">
+    <a href="../static/about.html#impressum">Imprint/Impressum</a>
+  </div>
+</div>
+</body>
+</html>
