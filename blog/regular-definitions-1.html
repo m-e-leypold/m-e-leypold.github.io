@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+
+  <link rel="stylesheet" href="../static/w3.css"/>
+  <link rel="stylesheet" href="../static/w3-theme-indigo.css"/>
+  <link rel="stylesheet" href="../static/gs-custom.css"/>
+  
+  
+  </head>  
+  <body>
+
+
+<div id="header" class="w3-container w3-theme w3-card-2">
+  <div class="w3-half">
+    <h1 class="title"><a href="../index.html">Glitzersachen</a></h1>
+  </div>
+  <div class="w3-half"><h2>The Amazing Markus and his Educated Bytes</h2></div>    
+</div>
+
+<article class="w3-container w3-text-theme">
+<h3 id="regular-definitions">Regular Definitions</h3>
+<p>Consider the following:</p>
+<table class="sourceCode python numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="sourceCode"><pre><code class="sourceCode python"><span class="ch">from</span> greenland.regexdefinitions <span class="ch">import</span> *
+
+rx,ex    = regular_expressions()
+
+ex.DIGS2 = <span class="st">&quot;[0-9]</span><span class="ot">{2}</span><span class="st">&quot;</span>
+ex.DIGS4 = <span class="st">&quot;[0-9]</span><span class="ot">{4}</span><span class="st">&quot;</span>
+
+rx.YEAR  = <span class="st">&quot;DIGS4&quot;</span>
+rx.MONTH = <span class="st">&quot;DIGS2&quot;</span>
+rx.DAY   = <span class="st">&quot;DIGS2&quot;</span>
+rx.DATE  = <span class="st">&quot;YEAR-MONTH-DAY&quot;</span>
+
+date = rx.DATE.match(<span class="st">&quot;2014-09-13&quot;</span>)
+
+<span class="dt">print</span>( date.fields )
+<span class="dt">print</span>( <span class="st">&quot;Year : &quot;</span>, date.YEAR )
+<span class="dt">print</span>( <span class="st">&quot;Month: &quot;</span>, date.MONTH )
+<span class="dt">print</span>( <span class="st">&quot;Day  : &quot;</span>, date.DAY )</code></pre></td></tr></table>
+<p>The output would be:</p>
+<table class="sourceCode python numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode python">{<span class="st">&#39;DATE&#39;</span>: <span class="st">&#39;2014-09-13&#39;</span>, <span class="st">&#39;DAY&#39;</span>: <span class="st">&#39;13&#39;</span>, <span class="st">&#39;MONTH&#39;</span>: <span class="st">&#39;09&#39;</span>, <span class="st">&#39;YEAR&#39;</span>: <span class="st">&#39;2014&#39;</span>}
+Year :  <span class="dv">2014</span>
+Month:  <span class="dv">09</span>
+Day  :  <span class="dv">13</span></code></pre></td></tr></table>
+<p>Ever wished to have something like that? Soon in a software package around the corner of this blog...</p>
+</article>
+
+<div class="w3-container w3-theme-l5 gs-footer">
+  <div class="w3-right w3-small">
+    <a href="../static/about.html#impressum">Imprint/Impressum</a>
+  </div>
+</div>
+</body>
+</html>
