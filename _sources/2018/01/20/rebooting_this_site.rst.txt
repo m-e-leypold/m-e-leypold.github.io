@@ -38,7 +38,7 @@ Tinkerer_. But it works *now*, which is much better than a blogging
 engine that needs to be developed first before I can start
 writing. And if I ever migrate away from Tinkerer_, instead of just
 extending it, I expect that not to be so painful as for the last
-migrations. Mosty because I think that `restructured text`_ (and that
+migrations. Mosty because I think that `reStructuredText`_ (and that
 is for me: Sphinx_) is really the way to for the foundation of a
 blogging engine.
 
@@ -50,7 +50,7 @@ and to version control on my texts. I also want to be able to extend
 the format, I want to write math, I want to render to PDF and I want
 easy cross referencing.
 
-All that are areas where `restructured text`_ excels. As an additional
+All that are areas where `reStructuredText`_ excels. As an additional
 boon there is the recommonmark_ extension for Sphinx_ which makes it
 possible to write in markdown (but no math, mind you).
 
@@ -58,9 +58,9 @@ All in all going with something Sphinx_ base sounds like a solution
 where I won't have to convert my texts every other year (knocking on
 wood).
 
-.. _tinkerer:                       https://tinkerer.me
+.. _tinkerer:                       http://tinkerer.me
 .. _sphinx:                         http://www.sphinx-doc.org/
 .. _github repository of this site: https://github.com/m-e-leypold/m-e-leypold.github.io
 .. _nikola static site generator:   https://getnikola.com/
-.. _restructured text:              http://docutils.sourceforge.net/rst.html
+.. _reStructuredText:               http://docutils.sourceforge.net/rst.html
 .. _recommonmark:                   https://github.com/rtfd/recommonmark
