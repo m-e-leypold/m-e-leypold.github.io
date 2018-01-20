@@ -1,0 +1,86 @@
+﻿.. Emacs! Please use -*- mode: rst; coding-system: utf-8-with-signature-unix -*-, thanks.
+   
+
+Impressum
+=========
+
+.. note::
+
+   Using this e-mail or postal addresses to send unsolicited
+   advertisement or the phone numbers for cold calls or unsolicited
+   advertisement is subject to a processing fee. By using them in the
+   aforementioned way you agree to pay me a processing fee of 50.- EUR
+   per call or e-mail. At first contact you'll be required to register
+   with a contact address to which an invoice will be sent.
+
+   I suggest you don't use this service, but rather refrain from
+   calling this phone number or mailing to the given addresses except
+   for the purposes given by § 5 TMG, § 55 RfStV (which don't incur a
+   fee from my side).
+
+
+Dieses Weblog ist ein publizistisches Angebot von:
+--------------------------------------------------
+
+.. image::    ./kontakt.png
+.. text:
+   
+   Markus E Leypold
+   Lärchenstrasse 1
+   72119 Ammerbuch
+
+   0176 97591494
+   redaktion-37az20l AT glitzersachen.de
+   
+   
+   
+Verantwortlicher im Sinne von § 5 TMG, § 55 RfStV:
+---------------------------------------------------
+
+.. image::    ./kontakt.png
+.. text:
+   
+   Markus E Leypold
+   Lärchenstrasse 1
+   72119 Ammerbuch
+
+   0176 97591494
+   redaktion-37az20l AT glitzersachen.de
+
+
+So erreichen Sie mich:
+----------------------
+
+.. image::    ./kontakt.png
+.. text:
+   
+   Markus E Leypold
+   Lärchenstrasse 1
+   72119 Ammerbuch
+
+   0176 97591494
+   redaktion-37az20l AT glitzersachen.de
+
+
+Copyright
+---------
+
+Achtung: Text-Inhalte dieses Weblogs, einschliesslich der in die Texte
+eingebundenen Illustrationen und einschließlich des RSS-Feeds,
+unterliegen einer Creative-Commons-Lizenz, wenn im betreffenden Text
+keine andere Lizenz genannt wird.  Sie dürfen diese Inhalte
+vervielfältigen, verbreiten und öffentlich zugänglich
+machen. Bedingungen: `Namensnennung, Weitergabe unter gleichen
+Bedingungen. Einzelheiten zur Lizenz`_.
+
+.. _Namensnennung, Weitergabe unter gleichen Bedingungen. Einzelheiten zur Lizenz: https://creativecommons.org/licenses/by-sa/3.0/de/
+
+Attention: Textual content of this Weblog including illustrations in
+the texts and including the RSS feed are published under a
+Creative-Commons-Lizenz if there is no other license stated in the
+texts themselves.
+
+You may copy, distribute and publish this content Condition:
+`Attribution, ShareAlike. Details of the License`_.
+
+.. _Attribution, ShareAlike. Details of the License: https://creativecommons.org/licenses/by-sa/3.0

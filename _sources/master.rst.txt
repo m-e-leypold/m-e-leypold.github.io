@@ -1,0 +1,13 @@
+Sitemap
+=======
+
+.. toctree::
+   :maxdepth: 1
+
+   2018/01/20/rebooting_this_site
+
+   lorem/index
+   
+   imprint
+
+   404

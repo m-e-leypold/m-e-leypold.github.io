@@ -1,0 +1,49 @@
+/* Some styling */header h1        { color: #6070ff !important; }
+div.archive_link { text-align: left; }
+
+/* Settings for compact header */
+
+header     { display: inline; }
+header img { display: inline; float:left; }
+header img { margin-top: 1em ; margin-bottom: 1em; }
+
+header h1 { font-size: 1.4em; display: block; text-align:right; margin-top:0.5em }
+
+header h2   { font-size: 1.0em; text-align:right; }
+header a    { display: inline; }
+header img  { width: 100px; }
+header div  { clear:both; height: 2px; width:100%; background-color: #93a4ad; margin-top:1em; }
+
+/* a larger header */
+
+@media only screen and (min-height: 400px) and (min-width: 400px) {
+   header img  { width: auto; }
+   header h1   { font-size: 1.73em }	
+   header h2   { font-size: 1.2em  } 
+}
+
+
+@media only screen and (min-height: 400px) and (min-width: 600px) {
+   header h1   { font-size: 2.8em;  }	
+   header h2   { font-size: 1.73em;  }
+   header div  { background-color:transparent; }
+}
+
+
+
+@media only screen and (min-width: 900px) {
+
+    header { left: 0; top: 0; position: fixed; width: 15em; }
+    header h1  { font-size: 2.0em;  text-align:center; display:block;}
+    header h2  { font-size: 1.0em;  text-align:center; display:block; }
+    header img { display:inline; margin: 0px; text-align:center; float:none; }
+    header div  { display:none; }
+    
+    nav { left: 0; top: 40%; position: fixed; width: 15em; }
+    nav li { display: block; text-align: center; width: 100%; }
+
+    div.main-container { margin-left: 15em; }
+    div.footer-container { margin-left: 15em; }
+
+    
+}
