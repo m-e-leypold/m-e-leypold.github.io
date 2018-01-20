@@ -16,18 +16,18 @@
         <meta name="description" content="Glittering things I found at the roadside">
         <meta name="viewport" content="width=device-width">
         <title>404 – Page Not Found – 404 &mdash; Glitzersachen</title>
-            <link rel="stylesheet" href="/_static/normalize.css" type="text/css">
-            <link rel="stylesheet" href="/_static/sphinx.css" type="text/css">
-            <link rel="stylesheet" href="/_static/main.css" type="text/css">
-            <link rel="stylesheet" href="/_static/flat.css" type="text/css">
-            <link rel="stylesheet" href="/_static/pygments.css" type="text/css" />
-            <link rel="stylesheet" href="/_static/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="/_static/style.css" type="text/css" /><link rel="shortcut icon" href="/_static/tinkerer.ico" /><!-- Load modernizr and JQuery -->
-        <script src="/_static/vendor/modernizr-2.6.2.min.js"></script>
+            <link rel="stylesheet" href="_static/normalize.css" type="text/css">
+            <link rel="stylesheet" href="_static/sphinx.css" type="text/css">
+            <link rel="stylesheet" href="_static/main.css" type="text/css">
+            <link rel="stylesheet" href="_static/flat.css" type="text/css">
+            <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+            <link rel="stylesheet" href="_static/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="_static/style.css" type="text/css" /><link rel="shortcut icon" href="_static/tinkerer.ico" /><!-- Load modernizr and JQuery -->
+        <script src="_static/vendor/modernizr-2.6.2.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-        <script src="/_static/plugins.js"></script>
-        <script src="/_static/main.js"></script>
+        <script>window.jQuery || document.write('<script src="_static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="_static/plugins.js"></script>
+        <script src="_static/main.js"></script>
         <link rel="search" title="Search" href="search.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -37,7 +37,7 @@
         SOURCELINK_SUFFIX: '.txt',
         HAS_SOURCE:  true
       };
-    </script><script type="text/javascript" src="/_static/underscore.js"></script><script type="text/javascript" src="/_static/doctools.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </script><script type="text/javascript" src="_static/underscore.js"></script><script type="text/javascript" src="_static/doctools.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -54,7 +54,7 @@
         <![endif]-->
 
       <div id="container"><header role="banner">
-  <a href="index.html"><img src="/_static/logo.png"  alt="Glitzersachen"/></a>
+  <a href="index.html"><img src="_static/logo.png"  alt="Glitzersachen"/></a>
   <a href="index.html"><h1>Glitzersachen</h1></a><h2>The Amazing Markus and his Educated Bytes</h2><div role="sep" />
 </header>
 
