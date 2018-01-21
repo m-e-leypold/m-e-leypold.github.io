@@ -4,7 +4,7 @@ Rebooting this Site
 ===================
 
 .. author:: M E Leypold
-.. categories:: none
+.. categories:: About Glitzersachen
 .. tags:: none
 .. comments::
 
@@ -18,17 +18,19 @@ the `github repository of this site`_.
 .. more::
 
 Why do I even bother, if I blog so rarely? Well -- for once it has
-been part of my new year resolutions to write more. I have profited
+been part of my new year's resolutions to write more. I have profited
 much (in terms of personal development, in terms of understanding
-certain subjects better) by writing, even if only to myself (some
+certain subjects better) by writing, even when only to myself (some
 people call that a diary). While not all of what I write will be
 published in this blog, I think a blog, writing for a (potentially)
-large, but largely unknown readership is a good way to impose a
-certain kind of discipline in ones writing. And yes, I'm aware of the
-fact that most blogs have hardly any readership (as evidenced by zero
-comments under their posts). It's not that I don't care, but I don't
-care so much: As I just said, the major advantage for me currently
-seems to be the different mindeset imposed on the writer.
+large, but largely unknown, readership is a good way to impose a
+certain kind of discipline in one's writing.
+
+And yes, I'm aware of the fact that most blogs have hardly any
+readership (as evidenced by zero comments under their posts). It's not
+that I don't care, but I don't care so much: As I just said, the major
+advantage for me currently seems to be the different mindset imposed
+on the writer.
 
 This time everything will be different. Tinkerer_ is based on
 Sphinx_. I've already been in the process to develop my own blogging
@@ -38,14 +40,14 @@ Tinkerer_. But it works *now*, which is much better than a blogging
 engine that needs to be developed first before I can start
 writing. And if I ever migrate away from Tinkerer_, instead of just
 extending it, I expect that not to be so painful as for the last
-migrations. Mosty because I think that `reStructuredText`_ (and that
+migrations. Mostly because I think that `reStructuredText`_ (and that
 is for me: Sphinx_) is really the way to for the foundation of a
 blogging engine.
 
 At least for me. I don't want fancy WYSIWYG editors (I see what I get
 pretty good when I invoke my web browser, thank you), I don't need
 online editing -- rather I want the ability to write offline (meaning:
-in any text editor or something that is supported on my SmartPhone)
+in any text editor or something that is supported on my Smartphone)
 and to version control on my texts. I also want to be able to extend
 the format, I want to write math, I want to render to PDF and I want
 easy cross referencing.
@@ -64,3 +66,7 @@ wood).
 .. _nikola static site generator:   https://getnikola.com/
 .. _reStructuredText:               http://docutils.sourceforge.net/rst.html
 .. _recommonmark:                   https://github.com/rtfd/recommonmark
+
+.. note::
+
+   Updated 2018-01-21: Spell checked + corrected.
