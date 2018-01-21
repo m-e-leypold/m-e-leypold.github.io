@@ -14,5 +14,14 @@ nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam
 tristique diam non turpis. Cras placerat accumsan nulla. Nullam
 rutrum. Nam vestibulum accumsan nisl.
 
+And :math:`\lambda x. x`.
 
+.. math::
+
+   \begin{pmatrix}
+     \alpha_0 & \beta^{*} \\
+     \gamma^{*} & \delta_1 
+   \end{pmatrix}
+
+   
 
