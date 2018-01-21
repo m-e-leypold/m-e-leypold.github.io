@@ -33,7 +33,6 @@ Dieses Weblog ist ein publizistisches Angebot von:
    redaktion-37az20l AT glitzersachen.de
    
    
-   
 Verantwortlicher im Sinne von § 5 TMG, § 55 RfStV:
 ---------------------------------------------------
 
@@ -84,3 +83,9 @@ You may copy, distribute and publish this content Condition:
 `Attribution, ShareAlike. Details of the License`_.
 
 .. _Attribution, ShareAlike. Details of the License: https://creativecommons.org/licenses/by-sa/3.0
+
+
+Comment Policy
+--------------
+
+In the works ...
